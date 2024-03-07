@@ -1,4 +1,6 @@
 
+using StockMarketSimulator.IoC;
+
 namespace StockMarketSimulator.API
 {
     public class Program
@@ -13,6 +15,13 @@ namespace StockMarketSimulator.API
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+
+            //ToDo: Create a extension here
+            //builder.Services.AddScoped<IStockService, StockService>();
+            DependencyInjector.RegisterDomain(builder.Services);
+            DependencyInjector.RegisterApplication(builder.Services);
+            DependencyInjector.RegisterRepository(builder.Services);
+
 
             var app = builder.Build();
 
