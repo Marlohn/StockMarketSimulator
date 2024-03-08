@@ -19,7 +19,7 @@ namespace StockMarketSimulator.Application.Services
         public async Task CreateUser(UserDto userDto)
         {
             //TODO: Map & validate
-            var user = new User() { Name = userDto.UserName, Password = userDto.Password };
+            var user = new User() { Name = userDto.Name, Password = userDto.Password };
 
             await _userService.Create(user);
         }

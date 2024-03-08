@@ -1,8 +1,8 @@
 ﻿using StockMarketSimulator.Domain.Models;
 
-namespace StockMarketSimulator.Domain.Services
+namespace StockMarketSimulator.Domain.Interfaces
 {
-    public interface IStockService
+    public interface IStockRepository
     {
         Task Upsert(Stock stock);
     }

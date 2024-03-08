@@ -26,7 +26,7 @@ namespace StockMarketSimulator.API.Controllers
         public async Task<IEnumerable<WeatherForecast>> GetAsync()
         {
 
-            await _stockMarketSimulatorService.CreateUser(new UserDto() { UserName = "Marlohn", Password = "senha" });
+            await _stockMarketSimulatorService.CreateUser(new UserDto() { Name = "Marlohn", Password = "senha" });
 
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {

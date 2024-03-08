@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace StockMarketSimulator.Application.Dtos
 {
-    internal class OrderDto
+    public class OrderDto
     {
     }
 }

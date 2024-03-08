@@ -11,6 +11,7 @@ namespace StockMarketSimulator.IoC
         public static void RegisterApplication(IServiceCollection svcCollection)
         {
             svcCollection.AddScoped<IStockMarketSimulatorService, StockMarketSimulatorService>();
+            svcCollection.AddScoped<IStockApplicationService, StockApplicationService>();
         }
 
         public static void RegisterDomain(IServiceCollection svcCollection)
@@ -24,6 +25,7 @@ namespace StockMarketSimulator.IoC
         public static void RegisterRepository(IServiceCollection svcCollection)
         {
             svcCollection.AddScoped<IUserRepository, UserRepository>();
+            svcCollection.AddScoped<IStockRepository, StockRepository>();
         }
     }
 }
