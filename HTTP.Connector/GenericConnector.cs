@@ -1,7 +1,6 @@
 ﻿using RestSharp;
-using System;
 
-namespace ABG.HTTP.Connector
+namespace HTTP.Connector
 {
     public class GenericConnector : BaseHttpRestClient, IGenericConnector
     {
@@ -11,7 +10,7 @@ namespace ABG.HTTP.Connector
             //AddDefaultHeader("Access-Key-Secret", ultracommercePrivateApiOptions.AccessKeySecret);
         }
 
-        public async Task RequestBtc() 
+        public async Task RequestBtc()
         {
             RestRequest request = CreateRequest("https://api.api-ninjas.com/v1/cryptoprice?symbol=BTCUSDC", Method.Get);
 

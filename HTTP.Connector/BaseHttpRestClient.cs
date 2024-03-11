@@ -1,6 +1,6 @@
 ﻿using RestSharp;
 
-namespace ABG.HTTP.Connector
+namespace HTTP.Connector
 {
     public abstract class BaseHttpRestClient
     {

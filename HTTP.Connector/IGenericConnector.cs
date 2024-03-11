@@ -1,4 +1,4 @@
-﻿namespace ABG.HTTP.Connector
+﻿namespace HTTP.Connector
 {
     public interface IGenericConnector
     {
