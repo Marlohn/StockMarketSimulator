@@ -1,11 +1,14 @@
 using System;
 using Microsoft.Azure.Functions.Worker;
 using Microsoft.Extensions.Logging;
+using StockMarketSimulator.Application.Dtos;
+using StockMarketSimulator.Application.Services;
 
 namespace StockMarketSimulator.Sinks.Functions
 {
     public class BitcoinFunction
     {
+        private readonly IStockApplicationService _stockApplicationService;
         private readonly ILogger _logger;
 
         public BitcoinFunction(ILoggerFactory loggerFactory)
@@ -16,6 +19,7 @@ namespace StockMarketSimulator.Sinks.Functions
         [Function(nameof(BitcoinFunction))]
         public void Run([TimerTrigger("*/5 * * * * *")] MyInfo myTimer)
         {
+            _stockApplicationService.UpsertStock(new StockDto());
             _logger.LogInformation($"C# Timer trigger function executed at: {DateTime.Now}");
             //_logger.LogInformation($"Next timer schedule at: {myTimer.ScheduleStatus.Next}");
         }

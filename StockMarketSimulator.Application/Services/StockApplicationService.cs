@@ -14,7 +14,7 @@ namespace StockMarketSimulator.Application.Services
 
         public async Task UpsertStock(StockDto stockDto)
         {
-            _stockService.
+            //_stockService.
             throw new NotImplementedException();
         }
     }
