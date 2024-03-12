@@ -16,12 +16,12 @@ namespace StockMarketSimulator.Sinks.Functions
         }
 
         [Function("BitcoinFunction")]
-        //public void Run([TimerTrigger("0 */5 * * * *")] TimerInfo myTimer) //5min
-        public void Run([TimerTrigger("*/5 * * * * *")] TimerInfo myTimer) //5sec
+        public void Run([TimerTrigger("0 */5 * * * *")] TimerInfo myTimer) //5min
+        //public void Run([TimerTrigger("*/5 * * * * *")] TimerInfo myTimer) //5sec
         {
             _logger.LogInformation($"C# Timer trigger function executed at: {DateTime.Now}");
 
-            //_sinksServices.
+            _sinksServices.UpsertStock(new());
 
             if (myTimer.ScheduleStatus is not null)
             {

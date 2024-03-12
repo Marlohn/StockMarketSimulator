@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using HTTP.Connector;
+using Microsoft.Extensions.DependencyInjection;
 using StockMarketSimulator.Sinks.Kernel.Services;
 
 namespace StockMarketSimulator.Sinks.Kernel.IoC
@@ -8,6 +9,7 @@ namespace StockMarketSimulator.Sinks.Kernel.IoC
         public static IServiceCollection AddSinkService(this IServiceCollection services)
         {
             services.AddScoped<ISinksServices, SinksService>();
+            services.AddScoped<IGenericConnector, GenericConnector>();
             return services;
         }
     }
