@@ -1,4 +1,5 @@
 ﻿using StockMarketSimulator.Application.Dtos;
+using StockMarketSimulator.Domain.Models;
 using StockMarketSimulator.Domain.Services;
 
 namespace StockMarketSimulator.Application.Services
@@ -14,8 +15,12 @@ namespace StockMarketSimulator.Application.Services
 
         public async Task UpsertStock(StockDto stockDto)
         {
-            //_stockService.
-            throw new NotImplementedException();
+            await _stockService.Upsert(new Stock()
+            {
+                Symbol = stockDto.Symbol,
+                Name = stockDto.Name,
+                Price = stockDto.Price
+            });
         }
     }
 }

@@ -1,7 +1,5 @@
-using System;
 using Microsoft.Azure.Functions.Worker;
 using Microsoft.Extensions.Logging;
-using StockMarketSimulator.Application.Dtos;
 using StockMarketSimulator.Application.Services;
 
 namespace StockMarketSimulator.Sinks.Functions
@@ -11,33 +9,24 @@ namespace StockMarketSimulator.Sinks.Functions
         private readonly IStockApplicationService _stockApplicationService;
         private readonly ILogger _logger;
 
-        public BitcoinFunction(ILoggerFactory loggerFactory)
+        public BitcoinFunction(ILoggerFactory loggerFactory, IStockApplicationService stockApplicationService)
         {
+            _stockApplicationService = stockApplicationService;
             _logger = loggerFactory.CreateLogger<BitcoinFunction>();
+
         }
 
-        [Function(nameof(BitcoinFunction))]
-        public void Run([TimerTrigger("*/5 * * * * *")] MyInfo myTimer)
+        [Function("BitcoinFunction")]
+        //public void Run([TimerTrigger("0 */5 * * * *")] TimerInfo myTimer) //5min
+        public void Run([TimerTrigger("*/5 * * * * *")] TimerInfo myTimer) //5sec
         {
-            _stockApplicationService.UpsertStock(new StockDto());
             _logger.LogInformation($"C# Timer trigger function executed at: {DateTime.Now}");
-            //_logger.LogInformation($"Next timer schedule at: {myTimer.ScheduleStatus.Next}");
+
+            _stockApplicationService.UpsertStock(null);
+            if (myTimer.ScheduleStatus is not null)
+            {
+                _logger.LogInformation($"Next timer schedule at: {myTimer.ScheduleStatus.Next}");
+            }
         }
-    }
-
-    public class MyInfo
-    {
-        public MyScheduleStatus ScheduleStatus { get; set; }
-
-        public bool IsPastDue { get; set; }
-    }
-
-    public class MyScheduleStatus
-    {
-        public DateTime Last { get; set; }
-
-        public DateTime Next { get; set; }
-
-        public DateTime LastUpdated { get; set; }
     }
 }
