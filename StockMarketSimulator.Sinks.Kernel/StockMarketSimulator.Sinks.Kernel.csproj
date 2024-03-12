@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\HTTP.Connector\HTTP.Connector.csproj" />
+    <ProjectReference Include="..\StockMarketSimulator.Application\StockMarketSimulator.Application.csproj" />
+  </ItemGroup>
+
 </Project>

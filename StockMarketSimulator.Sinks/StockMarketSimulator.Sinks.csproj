@@ -17,8 +17,6 @@
     <PackageReference Include="Microsoft.Azure.Functions.Worker.ApplicationInsights" Version="1.1.0" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\StockMarketSimulator.Application\StockMarketSimulator.Application.csproj" />
-    <ProjectReference Include="..\StockMarketSimulator.IoC\StockMarketSimulator.IoC.csproj" />
     <ProjectReference Include="..\StockMarketSimulator.Sinks.Kernel\StockMarketSimulator.Sinks.Kernel.csproj" />
   </ItemGroup>
   <ItemGroup>

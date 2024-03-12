@@ -1,7 +1,8 @@
 using Microsoft.Azure.Functions.Worker;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using StockMarketSimulator.IoC;
+using StockMarketSimulator.Application.Extensions;
+using StockMarketSimulator.Sinks.Kernel.IoC;
 
 var host = new HostBuilder()
     .ConfigureFunctionsWebApplication()
@@ -10,8 +11,7 @@ var host = new HostBuilder()
         services.AddApplicationInsightsTelemetryWorkerService();
         services.ConfigureFunctionsApplicationInsights();
         services.AddApplicationServices();
-        services.AddDomainServices();
-        services.AddRepositoryServices();
+        services.AddSinkService();
     })
     .Build();
 

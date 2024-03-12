@@ -1,27 +1,24 @@
 using Microsoft.Azure.Functions.Worker;
 using Microsoft.Extensions.Logging;
-using StockMarketSimulator.Sinks.Kernel.Services;
+using StockMarketSimulator.Application.Services;
 
-namespace StockMarketSimulator.Sinks.Functions
+namespace FunctionApp1.Functions
 {
     public class BitcoinFunction
     {
         private readonly ILogger _logger;
-        private readonly ISinksServices _sinksServices;
 
-        public BitcoinFunction(ILoggerFactory loggerFactory, ISinksServices sinksServices)
+        public BitcoinFunction(ILoggerFactory loggerFactory)
         {
-            _sinksServices = sinksServices;
             _logger = loggerFactory.CreateLogger<BitcoinFunction>();
         }
 
         [Function("BitcoinFunction")]
-        //public void Run([TimerTrigger("0 */5 * * * *")] TimerInfo myTimer) //5min
-        public void Run([TimerTrigger("*/5 * * * * *")] TimerInfo myTimer) //5sec
+        public void Run([TimerTrigger("0 */5 * * * *")] TimerInfo myTimer)
         {
             _logger.LogInformation($"C# Timer trigger function executed at: {DateTime.Now}");
 
-            //_sinksServices.
+            _stockApplicationService.UpsertStock(null);
 
             if (myTimer.ScheduleStatus is not null)
             {
