@@ -1,0 +1,3 @@
+@StockMarketSimulator.API_HostAddress = http://localhost:7029
+
+GET http://localhost:7029/api/BitcoinHttpFunction

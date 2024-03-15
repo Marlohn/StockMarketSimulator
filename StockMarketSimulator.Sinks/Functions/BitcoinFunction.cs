@@ -1,3 +1,5 @@
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.Functions.Worker;
 using Microsoft.Extensions.Logging;
 using StockMarketSimulator.Sinks.Kernel.Services;
@@ -15,18 +17,35 @@ namespace StockMarketSimulator.Sinks.Functions
             _logger = loggerFactory.CreateLogger<BitcoinFunction>();
         }
 
-        [Function("BitcoinFunction")]
-        public void Run([TimerTrigger("0 */5 * * * *")] TimerInfo myTimer) //5min
-        //public void Run([TimerTrigger("*/5 * * * * *")] TimerInfo myTimer) //5sec
+        //[Function(nameof(BitcoinTimerFunction))]
+        //public async Task BitcoinTimerFunction([TimerTrigger("0 */5 * * * *")] TimerInfo myTimer) //5min
+        ////public void Run([TimerTrigger("*/5 * * * * *")] TimerInfo myTimer) //5sec
+        //{
+        //    _logger.LogInformation($"C# Timer trigger function executed at: {DateTime.Now}");
+
+        //    await UpdateBtc();
+
+        //    if (myTimer.ScheduleStatus is not null)
+        //    {
+        //        _logger.LogInformation($"Next timer schedule at: {myTimer.ScheduleStatus.Next}");
+        //    }
+        //}
+
+
+        [Function(nameof(BitcoinHttpFunction))]
+        public async Task<IActionResult> BitcoinHttpFunction([HttpTrigger(AuthorizationLevel.Anonymous, "get", "post")] HttpRequest req)
         {
-            _logger.LogInformation($"C# Timer trigger function executed at: {DateTime.Now}");
+            _logger.LogInformation("C# HTTP trigger function processed a request.");
 
-            _sinksServices.UpsertStock(new());
+            await UpdateBtc();
 
-            if (myTimer.ScheduleStatus is not null)
-            {
-                _logger.LogInformation($"Next timer schedule at: {myTimer.ScheduleStatus.Next}");
-            }
+            return new OkObjectResult("Welcome to Azure Functions!");
         }
+
+        private async Task UpdateBtc()
+        {
+            await _sinksServices.UpdateBtc();
+        }
+
     }
 }

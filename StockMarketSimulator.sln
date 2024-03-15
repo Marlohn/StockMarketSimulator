@@ -35,9 +35,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Connectors", "Connectors", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HTTP.Connector", "HTTP.Connector\HTTP.Connector.csproj", "{DC2D0EA3-5EF9-47A0-9135-D99902DACC6B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockMarketSimulator.Sinks", "StockMarketSimulator.Sinks\StockMarketSimulator.Sinks.csproj", "{4D860584-8507-45DA-B823-0B9DD8E0BDBB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StockMarketSimulator.Sinks", "StockMarketSimulator.Sinks\StockMarketSimulator.Sinks.csproj", "{4D860584-8507-45DA-B823-0B9DD8E0BDBB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockMarketSimulator.Sinks.Kernel", "StockMarketSimulator.Sinks.Kernel\StockMarketSimulator.Sinks.Kernel.csproj", "{E9309BCF-EC48-4E9E-B5AD-E3A3C2A0FA8A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StockMarketSimulator.Sinks.Kernel", "StockMarketSimulator.Sinks.Kernel\StockMarketSimulator.Sinks.Kernel.csproj", "{E9309BCF-EC48-4E9E-B5AD-E3A3C2A0FA8A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzureTables.Connector", "AzureTables.Connector\AzureTables.Connector.csproj", "{E666CAF7-EDB8-46D9-9F3C-670CF238658F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +83,10 @@ Global
 		{E9309BCF-EC48-4E9E-B5AD-E3A3C2A0FA8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E9309BCF-EC48-4E9E-B5AD-E3A3C2A0FA8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E9309BCF-EC48-4E9E-B5AD-E3A3C2A0FA8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E666CAF7-EDB8-46D9-9F3C-670CF238658F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E666CAF7-EDB8-46D9-9F3C-670CF238658F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E666CAF7-EDB8-46D9-9F3C-670CF238658F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E666CAF7-EDB8-46D9-9F3C-670CF238658F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -96,6 +102,7 @@ Global
 		{8A0CBC26-E931-40FB-8CF2-FCF33BA4EC91} = {324745DD-0F50-46E5-87A4-0B4F68D00176}
 		{0E6FCA52-1420-484D-B267-C70C8BBE7EE3} = {8E598043-BF03-4E19-AD55-767C771E1AEA}
 		{DC2D0EA3-5EF9-47A0-9135-D99902DACC6B} = {0E6FCA52-1420-484D-B267-C70C8BBE7EE3}
+		{E666CAF7-EDB8-46D9-9F3C-670CF238658F} = {0E6FCA52-1420-484D-B267-C70C8BBE7EE3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2B82D33F-1710-43F3-B54D-C03B86D1DE8B}

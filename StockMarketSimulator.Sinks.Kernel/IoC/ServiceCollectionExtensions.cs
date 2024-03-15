@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using AzureTables.Connector.IoC;
+using Microsoft.Extensions.DependencyInjection;
 using StockMarketSimulator.Sinks.Kernel.Services;
 
 namespace StockMarketSimulator.Sinks.Kernel.IoC
@@ -9,6 +10,8 @@ namespace StockMarketSimulator.Sinks.Kernel.IoC
         {
             services.AddScoped<ISinksServices, SinksService>();
             services.AddScoped<IGenericHttpClient, GenericHttpClient>();
+            services.AddScoped<IStockRepository, StockRepository>();
+            services.AddAzureTables();
             return services;
         }
     }

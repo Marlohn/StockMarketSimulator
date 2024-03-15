@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace StockMarketSimulator.Domain.Models
+﻿namespace StockMarketSimulator.Domain.Models
 {
-    public class BaseModel
+    public class BaseModel 
     {
         public Guid Id { get; set; }
     }

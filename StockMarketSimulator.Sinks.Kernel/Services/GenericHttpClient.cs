@@ -1,4 +1,5 @@
 ﻿using HTTP.Connector;
+using HTTP.Connector.Models;
 using RestSharp;
 using StockMarketSimulator.Sinks.Kernel.Models;
 

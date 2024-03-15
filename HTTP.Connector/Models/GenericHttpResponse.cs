@@ -1,7 +1,7 @@
 ﻿using RestSharp;
 using System.Net;
 
-namespace HTTP.Connector
+namespace HTTP.Connector.Models
 {
     public class GenericHttpResponse<T>
     {
