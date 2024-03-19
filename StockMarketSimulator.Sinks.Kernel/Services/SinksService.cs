@@ -1,5 +1,4 @@
 ﻿using HTTP.Connector.Models;
-using StockMarketSimulator.Sinks.Kernel.Constants;
 using StockMarketSimulator.Sinks.Kernel.Models;
 using StockMarketSimulator.Sinks.Kernel.Models.Interfaces;
 using StockMarketSimulator.Sinks.Kernel.Repository;
@@ -23,35 +22,34 @@ namespace StockMarketSimulator.Sinks.Kernel.Services
         {
             GenericHttpResponse<ApiNinjasResponse> response = await _cryptoRepository.GetBitcoinPrice();
 
-            await UpsertStock(response, StockTypes.Crypto, StockNames.Bitcoin);
+            await UpsertStock(response);
         }
 
         public async Task UpdateUsd()
         {
             GenericHttpResponse<AwesomeApiUsdBrlResponse> response = await _fiatRepository.GetUsdPrice();
 
-            await UpsertStock(response, StockTypes.Fiat, StockNames.Dollar);
+            await UpsertStock(response);
         }
 
-        private async Task UpsertStock<T>(GenericHttpResponse<T> response, string stockType, string stockName) where T : IStockDataExtractor
+        private async Task UpsertStock<T>(GenericHttpResponse<T> response) where T : IStockDataExtractor
         {
             if (response.IsSuccessful && response.Data != null)
             {
-                // Todo: Create Validator
                 // ToDo: Create Mapper
                 var azureTableStockModel = new AzureTableStockModel()
                 {
-                    PartitionKey = stockType,
+                    PartitionKey = response.Data.GetStockType(),
                     RowKey = response.Data.GetSymbol(),
                     Symbol = response.Data.GetSymbol(),
-                    Name = stockName,
+                    Name = response.Data.GetName(),
                     Price = response.Data.GetPrice(),
                 };
+
+                // Todo: Create Validator
 
                 await _stockRepository.UpsertStock(azureTableStockModel);
             }
         }
-
-
     }
 }

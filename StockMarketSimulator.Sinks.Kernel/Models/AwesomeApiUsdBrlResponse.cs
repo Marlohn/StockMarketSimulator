@@ -1,5 +1,6 @@
 ﻿using Ardalis.GuardClauses;
 using StockMarketSimulator.Common.Extensions;
+using StockMarketSimulator.Sinks.Kernel.Constants;
 using StockMarketSimulator.Sinks.Kernel.Models.Interfaces;
 using System.Text.Json.Serialization;
 
@@ -10,6 +11,11 @@ namespace StockMarketSimulator.Sinks.Kernel.Models
         [JsonPropertyName("USDBRL")]
         public AwesomeApiCurrencyPairDetail UsdBrl { get; set; }
 
+        public string GetName()
+        {
+            return StockNames.Dollar;
+        }
+
         public float GetPrice()
         {
             Guard.Against.Null(UsdBrl, nameof(UsdBrl));
@@ -18,13 +24,14 @@ namespace StockMarketSimulator.Sinks.Kernel.Models
             return UsdBrl.Ask.ToFloat();
         }
 
+        public string GetStockType()
+        {
+            return StockTypes.Fiat;
+        }
+
         public string GetSymbol()
         {
-            Guard.Against.Null(UsdBrl, nameof(UsdBrl));
-            Guard.Against.NullOrEmpty(UsdBrl.Code, nameof(UsdBrl.Code));
-            Guard.Against.NullOrEmpty(UsdBrl.Codein, nameof(UsdBrl.Codein));
-
-            return $"{UsdBrl.Code}{UsdBrl.Codein}".ToLower();
+            return StockSymbols.UsdBrl;
         }
     }
 }

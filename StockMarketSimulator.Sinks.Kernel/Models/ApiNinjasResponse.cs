@@ -1,4 +1,5 @@
 ﻿using Ardalis.GuardClauses;
+using StockMarketSimulator.Sinks.Kernel.Constants;
 using StockMarketSimulator.Sinks.Kernel.Models.Interfaces;
 
 namespace StockMarketSimulator.Sinks.Kernel.Models
@@ -9,18 +10,25 @@ namespace StockMarketSimulator.Sinks.Kernel.Models
         public float Price { get; set; }
         public long Timestamp { get; set; }
 
+        public string GetName()
+        {
+            return StockNames.Bitcoin;
+        }
+
         public float GetPrice()
         {
             Guard.Against.Null(Price, nameof(Price));
-
             return Price;
         }
 
         public string GetSymbol()
         {
-            Guard.Against.Null(Symbol, nameof(Symbol));
+            return StockSymbols.BtcUsd;
+        }
 
-            return Symbol.ToLower();
+        public string GetStockType()
+        {
+            return StockTypes.Crypto;
         }
     }
 }
