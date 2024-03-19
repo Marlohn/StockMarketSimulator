@@ -2,7 +2,7 @@
 using AzureTables.Connector;
 using StockMarketSimulator.Sinks.Kernel.Models;
 
-namespace StockMarketSimulator.Sinks.Kernel.Services
+namespace StockMarketSimulator.Sinks.Kernel.Repository
 {
     public class StockRepository : AzureTablesRepositoryBase, IStockRepository
     {

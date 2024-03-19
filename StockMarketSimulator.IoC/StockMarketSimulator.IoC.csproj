@@ -12,7 +12,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\StockMarketSimulator.Application\StockMarketSimulator.Application.csproj" />
-    <ProjectReference Include="..\StockMarketSimulator.ConsoleApp\StockMarketSimulator.ConsoleApp.csproj" />
     <ProjectReference Include="..\StockMarketSimulator.Domain\StockMarketSimulator.Domain.csproj" />
     <ProjectReference Include="..\StockMarketSimulator.Repository\StockMarketSimulator.Repository.csproj" />
   </ItemGroup>

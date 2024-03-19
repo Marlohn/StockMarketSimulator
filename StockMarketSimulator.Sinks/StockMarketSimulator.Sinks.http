@@ -1,0 +1,7 @@
+﻿@StockMarketSimulator.Sinks_HostAddress = http://localhost:7029
+
+### UpdateBtc
+GET {{StockMarketSimulator.Sinks_HostAddress}}/api/BitcoinHttpFunction
+
+### UpdateUsd
+GET {{StockMarketSimulator.Sinks_HostAddress}}/api/DollarHttpFunction

@@ -3,5 +3,6 @@
     public interface ISinksServices
     {
         Task UpdateBtc();
+        Task UpdateUsd();
     }
 }
