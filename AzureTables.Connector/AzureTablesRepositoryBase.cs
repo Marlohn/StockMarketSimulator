@@ -1,5 +1,7 @@
 ﻿using Azure;
 using Azure.Data.Tables;
+using AzureTables.Connector.Enuns;
+using StockMarketSimulator.Common.Extensions;
 using System.Linq.Expressions;
 
 namespace AzureTables.Connector
@@ -8,9 +10,9 @@ namespace AzureTables.Connector
     {
         private readonly TableClient _tableClient;
 
-        public AzureTablesRepositoryBase(Dictionary<string, TableServiceClient> tableServiceClients, string serviceClientName, string tableName)
+        public AzureTablesRepositoryBase(Dictionary<string, TableServiceClient> tableServiceClients, ClientNames serviceClientName, string tableName)
         {
-            var serviceClient = tableServiceClients[serviceClientName];
+            var serviceClient = tableServiceClients[serviceClientName.GetDescription()];
             _tableClient = serviceClient.GetTableClient(tableName);
         }
 

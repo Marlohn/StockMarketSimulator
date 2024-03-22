@@ -14,4 +14,8 @@
     <ProjectReference Include="..\AzureTables.Connector\AzureTables.Connector.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Models\" />
+  </ItemGroup>
+
 </Project>

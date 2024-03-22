@@ -1,12 +1,13 @@
 ﻿using Azure.Data.Tables;
 using AzureTables.Connector;
+using AzureTables.Connector.Enuns;
 using StockMarketSimulator.Sinks.Kernel.Models;
 
 namespace StockMarketSimulator.Sinks.Kernel.Infrastructure.Repository
 {
     public class StockRepository : AzureTablesRepositoryBase, IStockRepository
     {
-        public StockRepository(Dictionary<string, TableServiceClient> tableServiceClients) : base(tableServiceClients, "Sinks", "Stocks")
+        public StockRepository(Dictionary<string, TableServiceClient> tableServiceClients) : base(tableServiceClients, ClientNames.Sinks, "Stocks")
         {
         }
 

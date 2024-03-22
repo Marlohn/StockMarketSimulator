@@ -4,5 +4,6 @@
     {
         public string UsersConnectionString { get; set; }
         public string SinksConnectionString { get; set; }
+        public string WalletsConnectionString { get; set; }
     }
 }
