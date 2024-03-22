@@ -5,7 +5,7 @@ using StockMarketSimulator.Sinks.Kernel.Models.Interfaces;
 
 namespace StockMarketSimulator.Sinks.Kernel.Services
 {
-    public class SinksService : ISinksServices
+    public class SinksService : ISinksService
     {
         private readonly IStockRepository _stockRepository;
         private readonly ICryptoRepository _cryptoRepository;

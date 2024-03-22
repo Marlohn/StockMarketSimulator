@@ -1,5 +1,6 @@
-
 using StockMarketSimulator.IoC;
+using StockMarketSimulator.Users.Kernel.Infratructure.IoC;
+using StockMarketSimulator.Wallets.Kernel.Infrastructure.IoC;
 
 namespace StockMarketSimulator.API
 {
@@ -16,12 +17,14 @@ namespace StockMarketSimulator.API
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
-            //ToDo: Create a extension here
-            //builder.Services.AddScoped<IStockService, StockService>();
-            DependencyInjector.RegisterDomain(builder.Services);
-            DependencyInjector.RegisterApplication(builder.Services);
-            DependencyInjector.RegisterRepository(builder.Services);
+            ////ToDo: Create a extension here
+            ////builder.Services.AddScoped<IStockService, StockService>();
+            //DependencyInjector.RegisterDomain(builder.Services);
+            //DependencyInjector.RegisterApplication(builder.Services);
+            //DependencyInjector.RegisterRepository(builder.Services);
 
+            builder.Services.AddUsersService();
+            builder.Services.AddWalletsService();
 
             var app = builder.Build();
 

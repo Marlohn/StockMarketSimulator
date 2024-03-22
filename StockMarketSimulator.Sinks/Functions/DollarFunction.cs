@@ -9,9 +9,9 @@ namespace StockMarketSimulator.Sinks.Functions
     public class DollarFunction
     {
         private readonly ILogger _logger;
-        private readonly ISinksServices _sinksServices;
+        private readonly ISinksService _sinksServices;
 
-        public DollarFunction(ILoggerFactory loggerFactory, ISinksServices sinksServices)
+        public DollarFunction(ILoggerFactory loggerFactory, ISinksService sinksServices)
         {
             _sinksServices = sinksServices;
             _logger = loggerFactory.CreateLogger<DollarFunction>();

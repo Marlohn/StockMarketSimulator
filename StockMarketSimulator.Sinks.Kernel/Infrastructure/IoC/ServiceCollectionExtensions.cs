@@ -9,7 +9,7 @@ namespace StockMarketSimulator.Sinks.Kernel.Infrastructure.IoC
     {
         public static IServiceCollection AddSinkService(this IServiceCollection services)
         {
-            services.AddScoped<ISinksServices, SinksService>();
+            services.AddScoped<ISinksService, SinksService>();
             services.AddScoped<ICryptoRepository, CryptoRepository>();
             services.AddScoped<IFiatRepository, FiatRepository>();
             services.AddScoped<IStockRepository, StockRepository>();

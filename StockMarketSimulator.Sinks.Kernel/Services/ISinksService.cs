@@ -1,6 +1,6 @@
 ﻿namespace StockMarketSimulator.Sinks.Kernel.Services
 {
-    public interface ISinksServices
+    public interface ISinksService
     {
         Task UpdateBtc();
         Task UpdateUsd();

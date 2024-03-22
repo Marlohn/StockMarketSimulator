@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using StockMarketSimulator.Users.Kernel.Services;
+
 
 namespace StockMarketSimulator.API.Controllers
 {
@@ -6,6 +8,13 @@ namespace StockMarketSimulator.API.Controllers
     [Route("[controller]")]
     public class UserController : Controller
     {
+        private readonly IUsersService _usersService;
+
+        public UserController(IUsersService usersService)
+        {
+            _usersService = usersService;
+        }
+
         [HttpGet]
         public async Task<IActionResult> Get(Guid userId)
         {
