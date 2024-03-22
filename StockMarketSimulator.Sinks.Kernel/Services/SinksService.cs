@@ -1,7 +1,7 @@
 ﻿using HTTP.Connector.Models;
+using StockMarketSimulator.Sinks.Kernel.Infrastructure.Repository;
 using StockMarketSimulator.Sinks.Kernel.Models;
 using StockMarketSimulator.Sinks.Kernel.Models.Interfaces;
-using StockMarketSimulator.Sinks.Kernel.Repository;
 
 namespace StockMarketSimulator.Sinks.Kernel.Services
 {

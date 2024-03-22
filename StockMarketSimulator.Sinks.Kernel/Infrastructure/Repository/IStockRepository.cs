@@ -1,7 +1,7 @@
 ﻿using StockMarketSimulator.Application.Dtos;
 using StockMarketSimulator.Sinks.Kernel.Models;
 
-namespace StockMarketSimulator.Sinks.Kernel.Repository
+namespace StockMarketSimulator.Sinks.Kernel.Infrastructure.Repository
 {
     public interface IStockRepository
     {

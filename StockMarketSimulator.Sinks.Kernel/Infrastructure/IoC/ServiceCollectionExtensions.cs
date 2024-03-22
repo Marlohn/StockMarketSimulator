@@ -1,9 +1,9 @@
 ﻿using AzureTables.Connector.IoC;
 using Microsoft.Extensions.DependencyInjection;
-using StockMarketSimulator.Sinks.Kernel.Repository;
+using StockMarketSimulator.Sinks.Kernel.Infrastructure.Repository;
 using StockMarketSimulator.Sinks.Kernel.Services;
 
-namespace StockMarketSimulator.Sinks.Kernel.IoC
+namespace StockMarketSimulator.Sinks.Kernel.Infrastructure.IoC
 {
     public static class ServiceCollectionExtensions
     {

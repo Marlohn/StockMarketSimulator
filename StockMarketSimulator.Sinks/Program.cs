@@ -2,7 +2,7 @@ using Microsoft.Azure.Functions.Worker;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using StockMarketSimulator.Application.Extensions;
-using StockMarketSimulator.Sinks.Kernel.IoC;
+using StockMarketSimulator.Sinks.Kernel.Infrastructure.IoC;
 
 var host = new HostBuilder()
     .ConfigureFunctionsWebApplication()
