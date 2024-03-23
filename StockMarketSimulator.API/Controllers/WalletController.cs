@@ -14,14 +14,20 @@ namespace StockMarketSimulator.API.Controllers
             _walletsService = walletsService;
         }
 
-        [HttpGet]
+        [HttpGet("{walletId}")]
         public async Task<IActionResult> Get(Guid walletId)
         {
             return Ok();
         }
 
-        [HttpGet]
-        public async Task<IActionResult> SendOrder(Guid walletId)
+        [HttpPost("order/{walletId}/{stockSymbol}/{quantity}")]
+        public async Task<IActionResult> Order(Guid walletId, string stockSymbol, decimal quantity)
+        {
+            return Ok();
+        }
+
+        [HttpPost("deposit/{walletId}/{stockName}/{quantity}")]
+        public async Task<IActionResult> Deposit(Guid walletId, string stockName, decimal quantity)
         {
             return Ok();
         }

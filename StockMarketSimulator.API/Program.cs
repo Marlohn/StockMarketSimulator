@@ -23,6 +23,7 @@ namespace StockMarketSimulator.API
             //DependencyInjector.RegisterApplication(builder.Services);
             //DependencyInjector.RegisterRepository(builder.Services);
 
+            //builder.Services.AddAzureTables();
             builder.Services.AddUsersService();
             builder.Services.AddWalletsService();
 

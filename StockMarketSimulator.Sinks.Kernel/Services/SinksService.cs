@@ -39,16 +39,17 @@ namespace StockMarketSimulator.Sinks.Kernel.Services
                 // ToDo: Create Mapper
                 var azureTableStockModel = new AzureTableStockModel()
                 {
-                    PartitionKey = response.Data.GetStockType(),
+                    PartitionKey = response.Data.GetName(),
                     RowKey = response.Data.GetSymbol(),
                     Symbol = response.Data.GetSymbol(),
                     Name = response.Data.GetName(),
+                    Type = response.Data.GetStockType(),
                     Price = response.Data.GetPrice(),
                 };
 
                 // Todo: Create Validator
 
-                await _stockRepository.UpsertStock(azureTableStockModel);
+                await _stockRepository.Upsert(azureTableStockModel);
             }
         }
     }
