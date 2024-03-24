@@ -12,7 +12,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\AzureTables.Connector\AzureTables.Connector.csproj" />
-    <ProjectReference Include="..\StockMarketSimulator.StockPairs.Kernel\StockMarketSimulator.StockPairs.Kernel.csproj" />
   </ItemGroup>
 
 </Project>

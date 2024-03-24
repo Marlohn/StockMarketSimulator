@@ -1,6 +1,7 @@
 using StockMarketSimulator.IoC;
 using StockMarketSimulator.Users.Kernel.Infratructure.IoC;
 using StockMarketSimulator.Wallets.Kernel.Infrastructure.IoC;
+using StockMarketSimulator.StockPairs.Kernel.Infrastructure.IoC;
 
 namespace StockMarketSimulator.API
 {
@@ -26,6 +27,7 @@ namespace StockMarketSimulator.API
             //builder.Services.AddAzureTables();
             builder.Services.AddUsersService();
             builder.Services.AddWalletsService();
+            builder.Services.AddStockPairsService();
 
             var app = builder.Build();
 

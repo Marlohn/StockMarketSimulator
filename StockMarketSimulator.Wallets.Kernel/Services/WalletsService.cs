@@ -1,4 +1,5 @@
 ﻿
+using StockMarketSimulator.StockPairs.Kernel.Infrastructure.Repository;
 using StockMarketSimulator.Wallets.Kernel.Infrastructure.Repository;
 using StockMarketSimulator.Wallets.Kernel.Models;
 
@@ -7,11 +8,12 @@ namespace StockMarketSimulator.Wallets.Kernel.Services
     public class WalletsService : IWalletsService
     {
         private readonly IWalletsRepository _walletsRepository;
-        //private readonly IStocksRepository _stocksRepository;
+        private readonly IStockPairsRepository _stockPairsRepository;
 
-        public WalletsService(IWalletsRepository walletsRepository)
+        public WalletsService(IWalletsRepository walletsRepository, IStockPairsRepository stockPairsRepository)
         {
             _walletsRepository = walletsRepository;
+            _stockPairsRepository = stockPairsRepository;
         }
 
         public async Task<WalletDto> Get(Guid walletId)
