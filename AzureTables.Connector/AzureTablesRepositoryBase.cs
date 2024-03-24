@@ -28,6 +28,7 @@ namespace AzureTables.Connector
             await _tableClient.AddEntityAsync(entity, cancellationToken: cancellationToken);
         }
 
+
         protected async Task<T?> GetByExpression<T>(Expression<Func<T, bool>> expression, CancellationToken cancellationToken = default) where T : class, ITableEntity, new()
         {
             var query = _tableClient.QueryAsync(expression, cancellationToken: cancellationToken);
@@ -71,6 +72,19 @@ namespace AzureTables.Connector
         protected async Task DeleteEntity<T>(T entity, CancellationToken cancellationToken) where T : ITableEntity
         {
             await _tableClient.DeleteEntityAsync(entity.PartitionKey, entity.RowKey, cancellationToken: cancellationToken);
+        }
+
+        public async Task<List<T>> Query<T>(Expression<Func<T, bool>> expression) where T : class, ITableEntity
+        {
+            //var _tableClient = _tableServiceClient.GetTableClient<T>(tableName);
+            AsyncPageable<T> queryResults = _tableClient.QueryAsync(expression);
+
+            var results = new List<T>();
+            await foreach (T qEntity in queryResults)
+            {
+                results.Add(qEntity);
+            }
+            return results;
         }
     }
 }
