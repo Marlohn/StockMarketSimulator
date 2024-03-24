@@ -79,7 +79,8 @@ namespace StockMarketSimulator.Wallets.Kernel.Services
         {
             //AzureTableWalletModel? azureTableUserModel = await _walletsRepository.Get(walletId, stockName);
             //Wallet should be renamed to Stock?
-            //Stock should be renamed to Pair?
+            //Stock should be renamed to Pair? StockPairs?
+            //Assets should be what?
         }
 
     }
