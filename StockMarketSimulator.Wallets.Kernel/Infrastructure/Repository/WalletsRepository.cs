@@ -6,7 +6,7 @@ using StockMarketSimulator.Wallets.Kernel.Models;
 
 namespace StockMarketSimulator.Wallets.Kernel.Infrastructure.Repository
 {
-    public class WalletsRepository : AzureTablesRepositoryBase, IWalletsRepository
+    internal class WalletsRepository : AzureTablesRepositoryBase, IWalletsRepository
     {
         public WalletsRepository(Dictionary<ClientNames, TableServiceClient> tableServiceClients) : base(tableServiceClients, ClientNames.Wallets, "Wallets")
         {

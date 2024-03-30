@@ -5,9 +5,9 @@ using StockMarketSimulator.Users.Kernel.Models;
 
 namespace StockMarketSimulator.Users.Kernel.Infratructure.Repository
 {
-    public class UsersRepository : AzureTablesRepositoryBase, IUsersRepository
+    internal class UsersRepository : AzureTablesRepositoryBase, IUsersRepository
     {
-        public UsersRepository(Dictionary<ClientNames, TableServiceClient> tableServiceClients) : base(tableServiceClients, ClientNames.Users, "Users")
+        public UsersRepository(Dictionary<ClientNames, TableServiceClient> tableServiceClients) : base(tableServiceClients, ClientNames.Sinks, "Users")
         {
         }
 

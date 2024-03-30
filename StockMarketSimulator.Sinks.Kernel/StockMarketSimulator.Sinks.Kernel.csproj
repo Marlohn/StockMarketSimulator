@@ -11,6 +11,8 @@
     <ProjectReference Include="..\HTTP.Connector\HTTP.Connector.csproj" />
     <ProjectReference Include="..\StockMarketSimulator.Application\StockMarketSimulator.Application.csproj" />
     <ProjectReference Include="..\StockMarketSimulator.Common\StockMarketSimulator.Common.csproj" />
+    <ProjectReference Include="..\StockMarketSimulator.StockPairs.Kernel\StockMarketSimulator.StockPairs.Kernel.csproj" />
+    <ProjectReference Include="..\StockMarketSimulator.Stocks.Kernel\StockMarketSimulator.Stocks.Kernel.csproj" />
   </ItemGroup>
 
   <ItemGroup>

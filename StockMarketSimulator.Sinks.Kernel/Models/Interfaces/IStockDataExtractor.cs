@@ -2,9 +2,8 @@
 {
     public interface IStockDataExtractor
     {
-        string GetName();
-        string GetStockType();
-        string GetSymbol();
+        string GetBaseSymbol();
+        string GetQuoteSymbol();
         float GetPrice();
     }
 }

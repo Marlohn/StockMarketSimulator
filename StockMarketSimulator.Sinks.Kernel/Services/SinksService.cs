@@ -2,55 +2,67 @@
 using StockMarketSimulator.Sinks.Kernel.Infrastructure.Repository;
 using StockMarketSimulator.Sinks.Kernel.Models;
 using StockMarketSimulator.Sinks.Kernel.Models.Interfaces;
+using StockMarketSimulator.StockPairs.Kernel.Models;
+using StockMarketSimulator.StockPairs.Kernel.Services;
+using StockMarketSimulator.Stocks.Kernel.Models;
+using StockMarketSimulator.Stocks.Kernel.Services;
 
 namespace StockMarketSimulator.Sinks.Kernel.Services
 {
     public class SinksService : ISinksService
     {
-        private readonly IStockRepository _stockRepository;
         private readonly ICryptoRepository _cryptoRepository;
         private readonly IFiatRepository _fiatRepository;
+        private readonly IStockPairsService _stockPairsService;
+        private readonly IStockService _stockService;
 
-        public SinksService(IStockRepository stockRepository, ICryptoRepository cryptoRepository, IFiatRepository fiatRepository)
+        public SinksService(ICryptoRepository cryptoRepository, IFiatRepository fiatRepository, IStockPairsService stockPairsService, IStockService stockService)
         {
-            _stockRepository = stockRepository;
             _cryptoRepository = cryptoRepository;
             _fiatRepository = fiatRepository;
+            _stockPairsService = stockPairsService;
+            _stockService = stockService;
         }
 
         public async Task UpdateBtc()
         {
             GenericHttpResponse<ApiNinjasResponse> response = await _cryptoRepository.GetBitcoinPrice();
 
-            await UpsertStock(response);
+            await UpsertStockPair(response);
         }
 
         public async Task UpdateUsd()
         {
             GenericHttpResponse<AwesomeApiUsdBrlResponse> response = await _fiatRepository.GetUsdPrice();
 
-            await UpsertStock(response);
+            await UpsertStockPair(response);
         }
 
-        private async Task UpsertStock<T>(GenericHttpResponse<T> response) where T : IStockDataExtractor
+        private async Task UpsertStockPair<T>(GenericHttpResponse<T> response) where T : IStockDataExtractor
         {
             if (response.IsSuccessful && response.Data != null)
             {
+                StockDto baseStock = await _stockService.Get(response.Data.GetBaseSymbol());
+                StockDto quoteStock = await _stockService.Get(response.Data.GetQuoteSymbol());
+
                 // ToDo: Create Mapper
-                var azureTableStockModel = new AzureTableStockModel()
+                var stockPair = new StockPairDTO()
                 {
-                    PartitionKey = response.Data.GetName(),
-                    RowKey = response.Data.GetSymbol(),
-                    Symbol = response.Data.GetSymbol(),
-                    Name = response.Data.GetName(),
-                    Type = response.Data.GetStockType(),
+                    BaseSymbol = baseStock.Symbol,
+                    QuoteSymbol = quoteStock.Symbol,
+                    Name = GenerateStockPairName(baseStock.Symbol, quoteStock.Symbol),
                     Price = response.Data.GetPrice(),
                 };
 
                 // Todo: Create Validator
 
-                await _stockRepository.Upsert(azureTableStockModel);
+                await _stockPairsService.Upsert(stockPair);
             }
+        }
+
+        private static string GenerateStockPairName(string baseSymbol, string quoteSymbol)
+        {
+            return $"{baseSymbol}{quoteSymbol}".ToLowerInvariant();
         }
     }
 }

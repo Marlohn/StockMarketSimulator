@@ -8,9 +8,6 @@ namespace AzureTables.Connector.Enuns
         Sinks,
 
         [Description("Wallets")]
-        Wallets,
-
-        [Description("Users")]
-        Users
+        Wallets
     }
 }

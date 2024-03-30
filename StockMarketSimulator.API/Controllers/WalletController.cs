@@ -28,10 +28,10 @@ namespace StockMarketSimulator.API.Controllers
             return Ok();
         }
 
-        [HttpPost("deposit/{walletId}/{stockName}/{quantity}")]
-        public async Task<IActionResult> Deposit(Guid walletId, string stockName, double quantity)
+        [HttpPost("deposit/{walletId}/{stockSymbol}/{quantity}")]
+        public async Task<IActionResult> Deposit(Guid walletId, string stockSymbol, double quantity)
         {
-            await _walletsService.Deposit(walletId, stockName, quantity);
+            await _walletsService.Deposit(walletId, stockSymbol, quantity);
             return Ok();
         }
     }
