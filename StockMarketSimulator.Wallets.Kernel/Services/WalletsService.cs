@@ -43,7 +43,7 @@ namespace StockMarketSimulator.Wallets.Kernel.Services
             return walletDto;
         }
 
-        public async Task CreateOrder(Guid walletId, string stockSymbol, decimal quantity)
+        public async Task Deposit(Guid walletId, string stockSymbol, float quantity)
         {
             await _walletsRepository.Upsert(new AzureTableWalletModel()
             {
@@ -73,7 +73,7 @@ namespace StockMarketSimulator.Wallets.Kernel.Services
             await _walletsRepository.Upsert(azureTableWalletModel);
         }
 
-        public async Task Withdraw(Guid walletId, string stockSymbol, double quantity)
+        public async Task Withdraw(Guid walletId, string stockSymbol, float quantity)
         {
             //Todo: Create Validator
 

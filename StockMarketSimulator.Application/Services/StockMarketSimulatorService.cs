@@ -24,7 +24,7 @@ namespace StockMarketSimulator.Application.Services
             await _userService.Create(user);
         }
 
-        public async Task AddMoney(Guid walletId, double amount)
+        public async Task AddMoney(Guid walletId, float amount)
         {
 
         }
