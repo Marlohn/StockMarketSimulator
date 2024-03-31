@@ -45,15 +45,6 @@ namespace StockMarketSimulator.Wallets.Kernel.Services
 
         public async Task Deposit(Guid walletId, string stockSymbol, float quantity)
         {
-            await _walletsRepository.Upsert(new AzureTableWalletModel()
-            {
-                // maybe we will not use it
-            }
-            );
-        }
-
-        public async Task Deposit(Guid walletId, string stockSymbol, double quantity)
-        {
             //Todo: Create Validator (quantity > 0 for ex)
 
             //ToDo: SHould request directly form repo?
@@ -94,25 +85,35 @@ namespace StockMarketSimulator.Wallets.Kernel.Services
             }
         }
 
-        public async Task Exchange(Guid walletId, string baseSymbol, string quoteSymbol, double quantity)
+        public async Task Exchange(Guid walletId, string baseSymbol, string quoteSymbol, float quantity)
         {
             WalletDto wallet = await Get(walletId);
-
-            StockPairDTO? stockPair = await _stockPairsService.Get(baseSymbol, quoteSymbol);
-
-            if (stockPair is not null)
+            
+            if (wallet.Assets.Any(x => x.StockSymbol == quoteSymbol))
             {
+                StockPairDTO? stockPair = await _stockPairsService.Get(baseSymbol, quoteSymbol);
+                if (stockPair is not null)
+                {
+                    float final = Convert(quantity, stockPair.Price);
 
-
+                    //var azureTableWalletModel = new AzureTableWalletModel()
+                    //{
+                    //    PartitionKey = walletId.ToString(),
+                    //    RowKey = stockSymbol,
+                    //    Balance = azureTableUserModel is null ? quantity : (azureTableUserModel.Balance - quantity)
+                    //};
+                }
+                //Todo: processed by queue?
 
             }
 
-            // processed by queue?
 
-            //AzureTableWalletModel? azureTableUserModel = await _walletsRepository.Get(walletId, stockName);
-            //Wallet should be renamed to Stock?
-            //Stock should be renamed to Pair? StockPairs?
-            //Assets should be what?
+
+            
+        }
+       internal static float Convert(float valorEmDolar, float taxaCambio)
+        {
+            return valorEmDolar * taxaCambio;
         }
 
     }
