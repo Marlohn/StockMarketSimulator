@@ -13,13 +13,11 @@ namespace StockMarketSimulator.Users.Kernel.Infratructure.Repository
 
         public async Task Create(AzureTableUserModel azureTableUserModel)
         {
-            //await AddEditEntity(azureTableUserModel);
             await AddEntity(azureTableUserModel);
         }
 
         public async Task<AzureTableUserModel?> Get(string userName)
         {
-            //await AddEditEntity(azureTableUserModel);
             return await GetByExpression<AzureTableUserModel>(x => x.RowKey == userName);
         }
     }

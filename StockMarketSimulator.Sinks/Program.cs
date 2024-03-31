@@ -11,7 +11,6 @@ var host = new HostBuilder()
     {
         services.AddApplicationInsightsTelemetryWorkerService();
         services.ConfigureFunctionsApplicationInsights();
-        //services.AddApplicationServices();
         services.AddSinkService();
         services.AddStockPairsService();
         services.AddStocksService();

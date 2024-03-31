@@ -11,20 +11,11 @@ namespace StockMarketSimulator.API
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            // Add services to the container.
 
             builder.Services.AddControllers();
-            // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
-            ////ToDo: Create a extension here
-            ////builder.Services.AddScoped<IStockService, StockService>();
-            //DependencyInjector.RegisterDomain(builder.Services);
-            //DependencyInjector.RegisterApplication(builder.Services);
-            //DependencyInjector.RegisterRepository(builder.Services);
-
-            //builder.Services.AddAzureTables();
             builder.Services.AddUsersService();
             builder.Services.AddWalletsService();
             builder.Services.AddStockPairsService();
@@ -32,7 +23,6 @@ namespace StockMarketSimulator.API
 
             var app = builder.Build();
 
-            // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
             {
                 app.UseSwagger();
@@ -42,7 +32,6 @@ namespace StockMarketSimulator.API
             app.UseHttpsRedirection();
 
             app.UseAuthorization();
-
 
             app.MapControllers();
 

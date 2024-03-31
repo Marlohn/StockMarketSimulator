@@ -46,10 +46,7 @@ namespace StockMarketSimulator.Wallets.Kernel.Services
         public async Task Deposit(Guid walletId, string stockSymbol, double quantity)
         {
             //Todo: Create Validator (quantity > 0 for ex)
-
             //ToDo: SHould request directly form repo?
-            //StockPairDTO azureTableStockPairModel = await _stockPairsService.Get(baseSymbol, quoteSymbol);
-
             AzureTableWalletModel? azureTableUserModel = await _walletsRepository.Get(walletId, stockSymbol);
 
             var azureTableWalletModel = new AzureTableWalletModel()
@@ -108,6 +105,5 @@ namespace StockMarketSimulator.Wallets.Kernel.Services
         {
             return quantity * price;
         }
-
     }
 }

@@ -21,7 +21,6 @@ namespace StockMarketSimulator.API.Controllers
             return Ok(wallet);
         }
 
-
         [HttpPost("deposit/{walletId}/{stockSymbol}/{quantity}")]
         public async Task<IActionResult> Deposit(Guid walletId, string stockSymbol, double quantity)
         {
@@ -35,7 +34,6 @@ namespace StockMarketSimulator.API.Controllers
             await _walletsService.Withdraw(walletId, stockSymbol, quantity);
             return Ok();
         }
-
 
         [HttpPost("exchange/{walletId}/{baseSymbol}/{quoteSymbol}/{quantity}")]
         public async Task<IActionResult> Exchange(Guid walletId, string baseSymbol, string quoteSymbol, double quantity)

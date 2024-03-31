@@ -1,5 +1,4 @@
-﻿
-using StockMarketSimulator.Wallets.Kernel.Models;
+﻿using StockMarketSimulator.Wallets.Kernel.Models;
 
 namespace StockMarketSimulator.Wallets.Kernel.Services
 {

@@ -46,6 +46,5 @@ namespace StockMarketSimulator.Sinks.Functions
         {
             await _sinksServices.UpdateBtc();
         }
-
     }
 }

@@ -1,5 +1,4 @@
-﻿using Azure;
-using Azure.Data.Tables;
+﻿using Azure.Data.Tables;
 using AzureTables.Connector;
 using AzureTables.Connector.Enuns;
 using StockMarketSimulator.Wallets.Kernel.Models;

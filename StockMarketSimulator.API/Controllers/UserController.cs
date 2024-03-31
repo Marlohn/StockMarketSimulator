@@ -2,7 +2,6 @@
 using StockMarketSimulator.Users.Kernel.Models;
 using StockMarketSimulator.Users.Kernel.Services;
 
-
 namespace StockMarketSimulator.API.Controllers
 {
     [ApiController]
