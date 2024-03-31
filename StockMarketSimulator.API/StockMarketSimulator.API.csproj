@@ -11,8 +11,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\StockMarketSimulator.Application\StockMarketSimulator.Application.csproj" />
-    <ProjectReference Include="..\StockMarketSimulator.IoC\StockMarketSimulator.IoC.csproj" />
     <ProjectReference Include="..\StockMarketSimulator.StockPairs.Kernel\StockMarketSimulator.StockPairs.Kernel.csproj" />
     <ProjectReference Include="..\StockMarketSimulator.Users.Kernel\StockMarketSimulator.Users.Kernel.csproj" />
     <ProjectReference Include="..\StockMarketSimulator.Wallets.Kernel\StockMarketSimulator.Wallets.Kernel.csproj" />

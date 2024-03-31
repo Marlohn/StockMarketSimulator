@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using StockMarketSimulator.Domain.Models;
 using StockMarketSimulator.Users.Kernel.Models;
 using StockMarketSimulator.Users.Kernel.Services;
 
