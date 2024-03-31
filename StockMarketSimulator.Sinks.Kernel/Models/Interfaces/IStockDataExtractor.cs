@@ -4,6 +4,6 @@
     {
         string GetBaseSymbol();
         string GetQuoteSymbol();
-        float GetPrice();
+        double GetPrice();
     }
 }

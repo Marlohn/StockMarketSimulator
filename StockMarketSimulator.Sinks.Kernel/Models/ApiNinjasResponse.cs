@@ -6,10 +6,10 @@ namespace StockMarketSimulator.Sinks.Kernel.Models
     public class ApiNinjasResponse : IStockDataExtractor
     {
         public string Symbol { get; set; }
-        public float Price { get; set; }
+        public double Price { get; set; }
         public long Timestamp { get; set; }
 
-        public float GetPrice()
+        public double GetPrice()
         {
             Guard.Against.Null(Price, nameof(Price));
             return Price;

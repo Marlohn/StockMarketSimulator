@@ -26,12 +26,12 @@ namespace StockMarketSimulator.Sinks.Kernel.Models
             return UsdBrl.Codein;
         }
 
-        public float GetPrice()
+        public double GetPrice()
         {
             Guard.Against.Null(UsdBrl, nameof(UsdBrl));
             Guard.Against.NullOrEmpty(UsdBrl.Ask, nameof(UsdBrl.Ask));
 
-            return UsdBrl.Ask.ToFloat();
+            return UsdBrl.Ask.Todouble();
         }
     }
 }

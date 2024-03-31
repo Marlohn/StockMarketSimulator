@@ -4,6 +4,6 @@
     {
         public string Name { get; set; }
         public string Symbol { get; set; }
-        public float Price { get; set; }
+        public double Price { get; set; }
     }
 }

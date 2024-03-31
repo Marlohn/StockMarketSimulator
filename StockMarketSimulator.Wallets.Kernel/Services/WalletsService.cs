@@ -43,7 +43,7 @@ namespace StockMarketSimulator.Wallets.Kernel.Services
             return walletDto;
         }
 
-        public async Task Deposit(Guid walletId, string stockSymbol, float quantity)
+        public async Task Deposit(Guid walletId, string stockSymbol, double quantity)
         {
             //Todo: Create Validator (quantity > 0 for ex)
 
@@ -64,7 +64,7 @@ namespace StockMarketSimulator.Wallets.Kernel.Services
             await _walletsRepository.Upsert(azureTableWalletModel);
         }
 
-        public async Task Withdraw(Guid walletId, string stockSymbol, float quantity)
+        public async Task Withdraw(Guid walletId, string stockSymbol, double quantity)
         {
             //Todo: Create Validator
 
@@ -85,35 +85,28 @@ namespace StockMarketSimulator.Wallets.Kernel.Services
             }
         }
 
-        public async Task Exchange(Guid walletId, string baseSymbol, string quoteSymbol, float quantity)
+        public async Task Exchange(Guid walletId, string baseSymbol, string quoteSymbol, double quantity)
         {
             WalletDto wallet = await Get(walletId);
-            
+
             if (wallet.Assets.Any(x => x.StockSymbol == quoteSymbol))
             {
                 StockPairDTO? stockPair = await _stockPairsService.Get(baseSymbol, quoteSymbol);
                 if (stockPair is not null)
                 {
-                    float final = Convert(quantity, stockPair.Price);
+                    double totalConversion = Convert(quantity, stockPair.Price);
 
-                    //var azureTableWalletModel = new AzureTableWalletModel()
-                    //{
-                    //    PartitionKey = walletId.ToString(),
-                    //    RowKey = stockSymbol,
-                    //    Balance = azureTableUserModel is null ? quantity : (azureTableUserModel.Balance - quantity)
-                    //};
+                    //Todo: check if have enough money
+                    //Todo: processed by queue?
+                    await Withdraw(walletId, quoteSymbol, totalConversion);
+                    await Deposit(walletId, baseSymbol, quantity);
                 }
-                //Todo: processed by queue?
-
             }
-
-
-
-            
         }
-       internal static float Convert(float valorEmDolar, float taxaCambio)
+
+        internal static double Convert(double quantity, double price)
         {
-            return valorEmDolar * taxaCambio;
+            return quantity * price;
         }
 
     }
