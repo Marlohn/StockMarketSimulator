@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace AzureTables.Connector.Enuns
+namespace AzureTables.Connector.Enums
 {
     public enum ClientNames
     {

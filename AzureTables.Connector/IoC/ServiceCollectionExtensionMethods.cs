@@ -1,29 +1,11 @@
 ﻿using Azure.Data.Tables;
-using AzureTables.Connector.Enuns;
+using AzureTables.Connector.Enums;
 using Microsoft.Extensions.DependencyInjection;
-using StockMarketSimulator.Common.Extensions;
 
 namespace AzureTables.Connector.IoC
 {
     public static class ServiceCollectionExtensionMethods
     {
-        //public static void AddAzureTables(this IServiceCollection services, Action<AzureTablesOptions> options)
-        //{
-        //    var config = new AzureTablesOptions();
-        //    options(config);
-
-
-
-        //    var tableServiceClients = new Dictionary<string, TableServiceClient>
-        //    {
-        //        { "Users", new TableServiceClient(config.UsersConnectionString) },
-        //        { "Sinks", new TableServiceClient(config.SinksConnectionString) },
-        //        { "Wallets", new TableServiceClient(config.WalletsConnectionString) }
-        //    };
-
-        //    services.AddSingleton(tableServiceClients);
-        //}
-
         public static void AddAzureTables(this IServiceCollection services)
         {
             //Here we have a sample of how to manage different clients and connection strings:

@@ -1,6 +1,6 @@
 ﻿using Azure.Data.Tables;
 using AzureTables.Connector;
-using AzureTables.Connector.Enuns;
+using AzureTables.Connector.Enums;
 using StockMarketSimulator.Stocks.Kernel.Models;
 
 namespace StockMarketSimulator.Stocks.Kernel.Infrastructure.Repository

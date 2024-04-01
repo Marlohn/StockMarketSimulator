@@ -1,7 +1,6 @@
 ﻿using Azure;
 using Azure.Data.Tables;
-using AzureTables.Connector.Enuns;
-using StockMarketSimulator.Common.Extensions;
+using AzureTables.Connector.Enums;
 using System.Linq.Expressions;
 
 namespace AzureTables.Connector
@@ -84,8 +83,8 @@ namespace AzureTables.Connector
                 results.Add(qEntity);
             }
             return results;
-        }       
-        
+        }
+
         public async Task<List<T>> GetAll<T>() where T : class, ITableEntity
         {
             AsyncPageable<T> queryResults = _tableClient.QueryAsync<T>();
