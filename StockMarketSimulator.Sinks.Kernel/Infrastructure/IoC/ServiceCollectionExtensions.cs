@@ -14,6 +14,7 @@ namespace StockMarketSimulator.Sinks.Kernel.Infrastructure.IoC
             services.AddScoped<ICryptoRepository, CryptoRepository>();
             services.AddScoped<IFiatRepository, FiatRepository>();
             services.AddScoped<IStockPairsService, StockPairsService>();
+            services.AddScoped<IQueueProcessStockPairsService, QueueProcessStockPairsService>();
             services.AddAzureTables();
             return services;
         }

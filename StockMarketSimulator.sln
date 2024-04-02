@@ -27,9 +27,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StockMarketSimulator.Wallet
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StockMarketSimulator.StockPairs.Kernel", "StockMarketSimulator.StockPairs.Kernel\StockMarketSimulator.StockPairs.Kernel.csproj", "{E50428DA-4312-4D0F-80C7-BD7918D0A7C4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockMarketSimulator.Stocks.Kernel", "StockMarketSimulator.Stocks.Kernel\StockMarketSimulator.Stocks.Kernel.csproj", "{C42EABCD-D176-4E78-AD7B-D1B54D6C53EE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StockMarketSimulator.Stocks.Kernel", "StockMarketSimulator.Stocks.Kernel\StockMarketSimulator.Stocks.Kernel.csproj", "{C42EABCD-D176-4E78-AD7B-D1B54D6C53EE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Kernel", "Kernel", "{A5586F40-CF11-4577-BF2E-EB1947353A14}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzureQueues.Connector", "AzureQueues.Connector\AzureQueues.Connector.csproj", "{AB888645-D426-4E5B-9D19-D0238A503168}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -77,6 +79,10 @@ Global
 		{C42EABCD-D176-4E78-AD7B-D1B54D6C53EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C42EABCD-D176-4E78-AD7B-D1B54D6C53EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C42EABCD-D176-4E78-AD7B-D1B54D6C53EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB888645-D426-4E5B-9D19-D0238A503168}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB888645-D426-4E5B-9D19-D0238A503168}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB888645-D426-4E5B-9D19-D0238A503168}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB888645-D426-4E5B-9D19-D0238A503168}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -93,6 +99,7 @@ Global
 		{0F1DEEB6-106B-4CD2-88F6-2CE1F36E2CEF} = {A5586F40-CF11-4577-BF2E-EB1947353A14}
 		{E50428DA-4312-4D0F-80C7-BD7918D0A7C4} = {A5586F40-CF11-4577-BF2E-EB1947353A14}
 		{C42EABCD-D176-4E78-AD7B-D1B54D6C53EE} = {A5586F40-CF11-4577-BF2E-EB1947353A14}
+		{AB888645-D426-4E5B-9D19-D0238A503168} = {0E6FCA52-1420-484D-B267-C70C8BBE7EE3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2B82D33F-1710-43F3-B54D-C03B86D1DE8B}

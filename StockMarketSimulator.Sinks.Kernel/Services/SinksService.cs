@@ -13,15 +13,18 @@ namespace StockMarketSimulator.Sinks.Kernel.Services
     {
         private readonly ICryptoRepository _cryptoRepository;
         private readonly IFiatRepository _fiatRepository;
-        private readonly IStockPairsService _stockPairsService;
+        //private readonly IStockPairsService _stockPairsService;
+        private readonly IQueueProcessStockPairsService _queueProcessStockPairsService;
         private readonly IStockService _stockService;
 
-        public SinksService(ICryptoRepository cryptoRepository, IFiatRepository fiatRepository, IStockPairsService stockPairsService, IStockService stockService)
+
+        public SinksService(ICryptoRepository cryptoRepository, IFiatRepository fiatRepository, IStockPairsService stockPairsService, IStockService stockService, IQueueProcessStockPairsService queueProcessStockPairsService)
         {
             _cryptoRepository = cryptoRepository;
             _fiatRepository = fiatRepository;
-            _stockPairsService = stockPairsService;
+            //_stockPairsService = stockPairsService;
             _stockService = stockService;
+            _queueProcessStockPairsService = queueProcessStockPairsService;
         }
 
         public async Task UpdateBtc()
@@ -56,7 +59,9 @@ namespace StockMarketSimulator.Sinks.Kernel.Services
 
                 // Todo: Create Validator
 
-                await _stockPairsService.Upsert(stockPair);
+                //TODO: SEND MESSAGE
+                await _queueProcessStockPairsService.Send(stockPair);
+                //await _stockPairsService.Upsert(stockPair);
             }
         }
 

@@ -82,6 +82,7 @@ namespace StockMarketSimulator.Wallets.Kernel.Services
             }
         }
 
+        //Make this a message?
         public async Task Exchange(Guid walletId, string baseSymbol, string quoteSymbol, double quantity)
         {
             WalletDto wallet = await Get(walletId);

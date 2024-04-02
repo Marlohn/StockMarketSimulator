@@ -18,4 +18,8 @@
     <PackageReference Include="Ardalis.GuardClauses" Version="4.5.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Infrastructure\Repository\Queues\" />
+  </ItemGroup>
+
 </Project>
