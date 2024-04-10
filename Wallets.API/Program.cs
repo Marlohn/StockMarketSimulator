@@ -1,6 +1,8 @@
-using StockMarketSimulator.Users.Kernel.Infratructure.IoC;
+using StockMarketSimulator.Wallets.Kernel.Infrastructure.IoC;
+using StockMarketSimulator.StockPairs.Kernel.Infrastructure.IoC;
+using StockMarketSimulator.Stocks.Kernel.Infrastructure.IoC;
 
-namespace StockMarketSimulator.API
+namespace Wallets.API
 {
     public class Program
     {
@@ -12,7 +14,9 @@ namespace StockMarketSimulator.API
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
-            builder.Services.AddUsersService();
+            builder.Services.AddWalletsService();
+            builder.Services.AddStockPairsService();
+            builder.Services.AddStocksService();
 
             var app = builder.Build();
 

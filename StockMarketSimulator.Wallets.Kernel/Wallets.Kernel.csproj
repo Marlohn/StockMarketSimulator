@@ -13,8 +13,8 @@
   <ItemGroup>
     <ProjectReference Include="..\AzureQueues.Connector\AzureQueues.Connector.csproj" />
     <ProjectReference Include="..\AzureTables.Connector\AzureTables.Connector.csproj" />
-    <ProjectReference Include="..\StockMarketSimulator.StockPairs.Kernel\StockMarketSimulator.StockPairs.Kernel.csproj" />
-    <ProjectReference Include="..\StockMarketSimulator.Stocks.Kernel\StockMarketSimulator.Stocks.Kernel.csproj" />
+    <ProjectReference Include="..\StockMarketSimulator.StockPairs.Kernel\StockPairs.Kernel.csproj" />
+    <ProjectReference Include="..\StockMarketSimulator.Stocks.Kernel\Stocks.Kernel.csproj" />
   </ItemGroup>
 
 </Project>
