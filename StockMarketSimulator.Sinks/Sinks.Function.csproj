@@ -18,7 +18,7 @@
     <PackageReference Include="Microsoft.Azure.Functions.Worker.ApplicationInsights" Version="1.1.0" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\StockMarketSimulator.Sinks.Kernel\StockMarketSimulator.Sinks.Kernel.csproj" />
+    <ProjectReference Include="..\StockMarketSimulator.Sinks.Kernel\Sinks.Kernel.csproj" />
   </ItemGroup>
   <ItemGroup>
     <None Update="host.json">

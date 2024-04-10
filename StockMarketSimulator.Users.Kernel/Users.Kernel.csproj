@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\AzureTables.Connector\AzureTables.Connector.csproj" />
+    <ProjectReference Include="..\UtilityExtensions\UtilityExtensions.csproj" />
   </ItemGroup>
 
 </Project>

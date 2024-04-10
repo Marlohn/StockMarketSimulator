@@ -1,6 +1,6 @@
-﻿using StockMarketSimulator.Common.Extensions;
-using StockMarketSimulator.Users.Kernel.Infratructure.Repository;
+﻿using StockMarketSimulator.Users.Kernel.Infratructure.Repository;
 using StockMarketSimulator.Users.Kernel.Models;
+using UtilityExtensions;
 
 namespace StockMarketSimulator.Users.Kernel.Services
 {

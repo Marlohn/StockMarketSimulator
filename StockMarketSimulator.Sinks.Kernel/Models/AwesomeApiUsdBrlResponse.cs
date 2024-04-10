@@ -1,5 +1,5 @@
 ﻿using Ardalis.GuardClauses;
-using StockMarketSimulator.Common.Extensions;
+using UtilityExtensions;
 using StockMarketSimulator.Sinks.Kernel.Models.Interfaces;
 using System.Text.Json.Serialization;
 
