@@ -11,7 +11,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Connectors", "Connectors", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HTTP.Connector", "HTTP.Connector\HTTP.Connector.csproj", "{DC2D0EA3-5EF9-47A0-9135-D99902DACC6B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sinks.Function", "StockMarketSimulator.Sinks\Sinks.Function.csproj", "{4D860584-8507-45DA-B823-0B9DD8E0BDBB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sinks.Functions", "StockMarketSimulator.Sinks\Sinks.Functions.csproj", "{4D860584-8507-45DA-B823-0B9DD8E0BDBB}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sinks.Kernel", "StockMarketSimulator.Sinks.Kernel\Sinks.Kernel.csproj", "{E9309BCF-EC48-4E9E-B5AD-E3A3C2A0FA8A}"
 EndProject
@@ -39,11 +39,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Users", "Users", "{2CD9163F
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Wallets", "Wallets", "{1D146C64-90B1-4A95-9A31-0371C07CB969}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wallets.API", "Wallets.API\Wallets.API.csproj", "{BCC623FA-C613-4A8D-BB55-2011E9A3A66A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wallets.API", "Wallets.API\Wallets.API.csproj", "{BCC623FA-C613-4A8D-BB55-2011E9A3A66A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UtilityExtensions", "UtilityExtensions\UtilityExtensions.csproj", "{96A25C8C-8D52-43C8-9B4E-31FD753C90D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UtilityExtensions", "UtilityExtensions\UtilityExtensions.csproj", "{96A25C8C-8D52-43C8-9B4E-31FD753C90D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exceptions", "Exceptions\Exceptions.csproj", "{84534AE9-8B44-43A6-80D6-FCD2DE6E9A1B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exceptions", "Exceptions\Exceptions.csproj", "{84534AE9-8B44-43A6-80D6-FCD2DE6E9A1B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

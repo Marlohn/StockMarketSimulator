@@ -1,3 +1,6 @@
+using StockMarketSimulator.Wallets.Kernel.Infrastructure.IoC;
+using StockMarketSimulator.StockPairs.Kernel.Infrastructure.IoC;
+using StockMarketSimulator.Stocks.Kernel.Infrastructure.IoC;
 
 namespace Wallets.API
 {
@@ -7,16 +10,16 @@ namespace Wallets.API
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            // Add services to the container.
-
             builder.Services.AddControllers();
-            // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
+            builder.Services.AddWalletsService();
+            builder.Services.AddStockPairsService();
+            builder.Services.AddStocksService();
+
             var app = builder.Build();
 
-            // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
             {
                 app.UseSwagger();
@@ -26,7 +29,6 @@ namespace Wallets.API
             app.UseHttpsRedirection();
 
             app.UseAuthorization();
-
 
             app.MapControllers();
 
