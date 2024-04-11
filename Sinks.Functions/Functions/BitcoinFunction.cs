@@ -4,7 +4,7 @@ using Microsoft.Azure.Functions.Worker;
 using Microsoft.Extensions.Logging;
 using StockMarketSimulator.Sinks.Kernel.Services;
 
-namespace StockMarketSimulator.Sinks.Functions
+namespace Sinks.Functions
 {
     public class BitcoinFunction
     {

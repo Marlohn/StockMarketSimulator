@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HTTP.Connector", "HTTP.Conn
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sinks.Functions", "StockMarketSimulator.Sinks\Sinks.Functions.csproj", "{4D860584-8507-45DA-B823-0B9DD8E0BDBB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sinks.Kernel", "StockMarketSimulator.Sinks.Kernel\Sinks.Kernel.csproj", "{E9309BCF-EC48-4E9E-B5AD-E3A3C2A0FA8A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sinks.Kernel", "Sinks.Kernel\Sinks.Kernel.csproj", "{E9309BCF-EC48-4E9E-B5AD-E3A3C2A0FA8A}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzureTables.Connector", "AzureTables.Connector\AzureTables.Connector.csproj", "{E666CAF7-EDB8-46D9-9F3C-670CF238658F}"
 EndProject
@@ -21,7 +21,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Users.Kernel", "Users.Kerne
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wallets.Kernel", "Wallets.Kernel\Wallets.Kernel.csproj", "{0F1DEEB6-106B-4CD2-88F6-2CE1F36E2CEF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StockPairs.Kernel", "StockMarketSimulator.StockPairs.Kernel\StockPairs.Kernel.csproj", "{E50428DA-4312-4D0F-80C7-BD7918D0A7C4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StockPairs.Kernel", "StockPairs.Kernel\StockPairs.Kernel.csproj", "{E50428DA-4312-4D0F-80C7-BD7918D0A7C4}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Stocks.Kernel", "Stocks.Kernel\Stocks.Kernel.csproj", "{C42EABCD-D176-4E78-AD7B-D1B54D6C53EE}"
 EndProject
