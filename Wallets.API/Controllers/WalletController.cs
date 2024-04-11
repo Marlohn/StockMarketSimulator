@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using StockMarketSimulator.Wallets.Kernel.Services;
+using Wallets.Kernel.Services;
 
-namespace StockMarketSimulator.API.Controllers
+namespace Wallets.API.Controllers
 {
     [ApiController]
     [Route("[controller]")]

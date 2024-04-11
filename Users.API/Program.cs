@@ -1,8 +1,6 @@
-using StockPairs.Kernel.Infrastructure.IoC;
-using Stocks.Kernel.Infrastructure.IoC;
-using Wallets.Kernel.Infrastructure.IoC;
+using Users.Kernel.Infrastructure.IoC;
 
-namespace Wallets.API
+namespace Users.API
 {
     public class Program
     {
@@ -14,9 +12,7 @@ namespace Wallets.API
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
-            builder.Services.AddWalletsService();
-            builder.Services.AddStockPairsService();
-            builder.Services.AddStocksService();
+            builder.Services.AddUsersService();
 
             var app = builder.Build();
 
