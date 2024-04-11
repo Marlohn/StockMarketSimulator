@@ -1,4 +1,4 @@
-﻿namespace StockMarketSimulator
+﻿namespace StockMarketSimulator.ConsoleApp
 {
     internal class Program
     {
