@@ -1,9 +1,0 @@
-{
-  "profiles": {
-    "StockMarketSimulator.Sinks": {
-      "commandName": "Project",
-      "commandLineArgs": "--port 7029",
-      "launchBrowser": false
-    }
-  }
-}

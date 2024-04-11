@@ -11,7 +11,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Connectors", "Connectors", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HTTP.Connector", "HTTP.Connector\HTTP.Connector.csproj", "{DC2D0EA3-5EF9-47A0-9135-D99902DACC6B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sinks.Functions", "Sinks.Functions\Sinks.Functions.csproj", "{4D860584-8507-45DA-B823-0B9DD8E0BDBB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sinks.Functions", "StockMarketSimulator.Sinks\Sinks.Functions.csproj", "{4D860584-8507-45DA-B823-0B9DD8E0BDBB}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sinks.Kernel", "Sinks.Kernel\Sinks.Kernel.csproj", "{E9309BCF-EC48-4E9E-B5AD-E3A3C2A0FA8A}"
 EndProject

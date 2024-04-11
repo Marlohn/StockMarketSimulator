@@ -11,7 +11,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Wallets.Kernel\Wallets.Kernel.csproj" />
+    <ProjectReference Include="..\StockMarketSimulator.StockPairs.Kernel\StockPairs.Kernel.csproj" />
+    <ProjectReference Include="..\Users.Kernel\Users.Kernel.csproj" />
   </ItemGroup>
 
 </Project>
