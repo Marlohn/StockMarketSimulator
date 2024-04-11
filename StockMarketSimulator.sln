@@ -21,7 +21,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Users.Kernel", "Users.Kerne
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wallets.Kernel", "Wallets.Kernel\Wallets.Kernel.csproj", "{0F1DEEB6-106B-4CD2-88F6-2CE1F36E2CEF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StockPairs.Kernel", "StockMarketSimulator.StockPairs.Kernel\StockPairs.Kernel.csproj", "{E50428DA-4312-4D0F-80C7-BD7918D0A7C4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StockPairs.Kernel", "StockPairs.Kernel\StockPairs.Kernel.csproj", "{E50428DA-4312-4D0F-80C7-BD7918D0A7C4}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Stocks.Kernel", "Stocks.Kernel\Stocks.Kernel.csproj", "{C42EABCD-D176-4E78-AD7B-D1B54D6C53EE}"
 EndProject
