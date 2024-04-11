@@ -5,7 +5,7 @@ VisualStudioVersion = 17.9.34622.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{8E598043-BF03-4E19-AD55-767C771E1AEA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Users.API", "StockMarketSimulator.API\Users.API.csproj", "{A1BFE6C8-0A42-45F6-8403-9988633A6C93}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Users.API", "Users.API\Users.API.csproj", "{A1BFE6C8-0A42-45F6-8403-9988633A6C93}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Connectors", "Connectors", "{0E6FCA52-1420-484D-B267-C70C8BBE7EE3}"
 EndProject
@@ -17,7 +17,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sinks.Kernel", "StockMarket
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzureTables.Connector", "AzureTables.Connector\AzureTables.Connector.csproj", "{E666CAF7-EDB8-46D9-9F3C-670CF238658F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Users.Kernel", "StockMarketSimulator.Users.Kernel\Users.Kernel.csproj", "{396A7A3D-16F0-4141-ADE1-182B36780EE6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Users.Kernel", "Users.Kernel\Users.Kernel.csproj", "{396A7A3D-16F0-4141-ADE1-182B36780EE6}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wallets.Kernel", "Wallets.Kernel\Wallets.Kernel.csproj", "{0F1DEEB6-106B-4CD2-88F6-2CE1F36E2CEF}"
 EndProject
