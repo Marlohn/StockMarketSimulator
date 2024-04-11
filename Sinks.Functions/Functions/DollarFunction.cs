@@ -2,9 +2,9 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.Functions.Worker;
 using Microsoft.Extensions.Logging;
-using StockMarketSimulator.Sinks.Kernel.Services;
+using Sinks.Kernel.Services;
 
-namespace StockMarketSimulator.Sinks.Functions
+namespace Sinks.Functions.Functions
 {
     public class DollarFunction
     {

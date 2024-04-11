@@ -1,6 +1,6 @@
-﻿using StockMarketSimulator.Sinks.Kernel.Models;
+﻿using StockPairs.Kernel.Models;
 
-namespace StockMarketSimulator.StockPairs.Kernel.Infrastructure.Repository
+namespace StockPairs.Kernel.Infrastructure.Repository
 {
     public interface IStockPairsRepository
     {

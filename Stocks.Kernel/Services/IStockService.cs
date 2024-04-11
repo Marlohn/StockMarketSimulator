@@ -1,6 +1,6 @@
-﻿using StockMarketSimulator.Stocks.Kernel.Models;
+﻿using Stocks.Kernel.Models;
 
-namespace StockMarketSimulator.Stocks.Kernel.Services
+namespace Stocks.Kernel.Services
 {
     public interface IStockService
     {

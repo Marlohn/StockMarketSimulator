@@ -1,4 +1,4 @@
-﻿namespace StockMarketSimulator.Wallets.Kernel.Models
+﻿namespace Wallets.Kernel.Models
 {
     public class WalletDto
     {

@@ -1,13 +1,13 @@
 ﻿using HTTP.Connector.Models;
-using StockMarketSimulator.Sinks.Kernel.Infrastructure.Repository;
-using StockMarketSimulator.Sinks.Kernel.Models;
-using StockMarketSimulator.Sinks.Kernel.Models.Interfaces;
-using StockMarketSimulator.StockPairs.Kernel.Models;
-using StockMarketSimulator.StockPairs.Kernel.Services;
-using StockMarketSimulator.Stocks.Kernel.Models;
-using StockMarketSimulator.Stocks.Kernel.Services;
+using Sinks.Kernel.Infrastructure.Repository;
+using Sinks.Kernel.Models;
+using Sinks.Kernel.Models.Interfaces;
+using StockPairs.Kernel.Models;
+using StockPairs.Kernel.Services;
+using Stocks.Kernel.Models;
+using Stocks.Kernel.Services;
 
-namespace StockMarketSimulator.Sinks.Kernel.Services
+namespace Sinks.Kernel.Services
 {
     public class SinksService : ISinksService
     {

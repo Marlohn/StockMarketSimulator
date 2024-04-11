@@ -1,9 +1,9 @@
 ﻿using HTTP.Connector;
 using HTTP.Connector.Models;
 using RestSharp;
-using StockMarketSimulator.Sinks.Kernel.Models;
+using Sinks.Kernel.Models;
 
-namespace StockMarketSimulator.Sinks.Kernel.Infrastructure.Repository
+namespace Sinks.Kernel.Infrastructure.Repository
 {
     public class CryptoRepository : BaseHttpRestClient, ICryptoRepository
     {

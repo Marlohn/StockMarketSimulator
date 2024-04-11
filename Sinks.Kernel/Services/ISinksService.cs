@@ -1,4 +1,4 @@
-﻿namespace StockMarketSimulator.Sinks.Kernel.Services
+﻿namespace Sinks.Kernel.Services
 {
     public interface ISinksService
     {

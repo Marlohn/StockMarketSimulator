@@ -1,4 +1,4 @@
-﻿namespace StockMarketSimulator.Users.Kernel.Models
+﻿namespace Users.Kernel.Models
 {
     public class UserDTO
     {

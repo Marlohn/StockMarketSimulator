@@ -1,4 +1,4 @@
-﻿namespace StockMarketSimulator.StockPairs.Kernel.Models
+﻿namespace StockPairs.Kernel.Models
 {
     public class StockPairDTO
     {

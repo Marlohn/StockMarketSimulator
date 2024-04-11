@@ -1,6 +1,6 @@
-using StockMarketSimulator.Users.Kernel.Infratructure.IoC;
+using Users.Kernel.Infrastructure.IoC;
 
-namespace StockMarketSimulator.API
+namespace Users.API
 {
     public class Program
     {

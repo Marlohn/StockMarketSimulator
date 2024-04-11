@@ -1,6 +1,6 @@
-﻿using StockMarketSimulator.Wallets.Kernel.Models;
+﻿using Wallets.Kernel.Models;
 
-namespace StockMarketSimulator.Wallets.Kernel.Services
+namespace Wallets.Kernel.Services
 {
     public interface IWalletsService
     {

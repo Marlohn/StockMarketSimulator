@@ -1,4 +1,4 @@
-﻿namespace StockMarketSimulator.Sinks.Kernel.Models.Interfaces
+﻿namespace Sinks.Kernel.Models.Interfaces
 {
     public interface IStockDataExtractor
     {

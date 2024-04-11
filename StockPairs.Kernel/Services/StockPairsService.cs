@@ -1,8 +1,7 @@
-﻿using StockMarketSimulator.Sinks.Kernel.Models;
-using StockMarketSimulator.StockPairs.Kernel.Infrastructure.Repository;
-using StockMarketSimulator.StockPairs.Kernel.Models;
+﻿using StockPairs.Kernel.Infrastructure.Repository;
+using StockPairs.Kernel.Models;
 
-namespace StockMarketSimulator.StockPairs.Kernel.Services
+namespace StockPairs.Kernel.Services
 {
     public class StockPairsService : IStockPairsService
     {

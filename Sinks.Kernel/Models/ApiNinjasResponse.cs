@@ -1,7 +1,7 @@
 ﻿using Ardalis.GuardClauses;
-using StockMarketSimulator.Sinks.Kernel.Models.Interfaces;
+using Sinks.Kernel.Models.Interfaces;
 
-namespace StockMarketSimulator.Sinks.Kernel.Models
+namespace Sinks.Kernel.Models
 {
     public class ApiNinjasResponse : IStockDataExtractor
     {

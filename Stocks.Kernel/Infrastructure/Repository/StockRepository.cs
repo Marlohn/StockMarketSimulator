@@ -1,9 +1,9 @@
 ﻿using Azure.Data.Tables;
 using AzureTables.Connector;
 using AzureTables.Connector.Enums;
-using StockMarketSimulator.Stocks.Kernel.Models;
+using Stocks.Kernel.Models;
 
-namespace StockMarketSimulator.Stocks.Kernel.Infrastructure.Repository
+namespace Stocks.Kernel.Infrastructure.Repository
 {
     public class StockRepository : AzureTablesRepositoryBase, IStockRepository
     {

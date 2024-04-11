@@ -1,6 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace StockMarketSimulator.Sinks.Kernel.Models
+namespace Sinks.Kernel.Models
 {
     public class AwesomeApiCurrencyPairDetail
     {

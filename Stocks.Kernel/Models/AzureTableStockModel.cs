@@ -1,6 +1,6 @@
 ﻿using AzureTables.Connector.Models;
 
-namespace StockMarketSimulator.Stocks.Kernel.Models
+namespace Stocks.Kernel.Models
 {
     public class AzureTableStockModel : BaseAzureTableModel
     {

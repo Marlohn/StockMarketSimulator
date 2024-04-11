@@ -1,6 +1,6 @@
-﻿using StockMarketSimulator.Users.Kernel.Models;
+﻿using Users.Kernel.Models;
 
-namespace StockMarketSimulator.Users.Kernel.Infratructure.Repository
+namespace Users.Kernel.Infrastructure.Repository
 {
     public interface IUsersRepository
     {

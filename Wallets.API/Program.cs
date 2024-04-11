@@ -1,6 +1,6 @@
-using StockMarketSimulator.Wallets.Kernel.Infrastructure.IoC;
-using StockMarketSimulator.StockPairs.Kernel.Infrastructure.IoC;
-using StockMarketSimulator.Stocks.Kernel.Infrastructure.IoC;
+using StockPairs.Kernel.Infrastructure.IoC;
+using Stocks.Kernel.Infrastructure.IoC;
+using Wallets.Kernel.Infrastructure.IoC;
 
 namespace Wallets.API
 {

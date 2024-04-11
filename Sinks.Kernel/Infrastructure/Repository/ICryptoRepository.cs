@@ -1,7 +1,7 @@
 ﻿using HTTP.Connector.Models;
-using StockMarketSimulator.Sinks.Kernel.Models;
+using Sinks.Kernel.Models;
 
-namespace StockMarketSimulator.Sinks.Kernel.Infrastructure.Repository
+namespace Sinks.Kernel.Infrastructure.Repository
 {
     public interface ICryptoRepository
     {

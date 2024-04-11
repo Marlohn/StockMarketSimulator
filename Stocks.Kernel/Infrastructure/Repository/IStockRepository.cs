@@ -1,6 +1,6 @@
-﻿using StockMarketSimulator.Stocks.Kernel.Models;
+﻿using Stocks.Kernel.Models;
 
-namespace StockMarketSimulator.Stocks.Kernel.Infrastructure.Repository
+namespace Stocks.Kernel.Infrastructure.Repository
 {
     public interface IStockRepository
     {

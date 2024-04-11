@@ -1,9 +1,9 @@
 ﻿using Azure.Data.Tables;
 using AzureTables.Connector;
 using AzureTables.Connector.Enums;
-using StockMarketSimulator.Wallets.Kernel.Models;
+using Wallets.Kernel.Models;
 
-namespace StockMarketSimulator.Wallets.Kernel.Infrastructure.Repository
+namespace Wallets.Kernel.Infrastructure.Repository
 {
     internal class WalletsRepository : AzureTablesRepositoryBase, IWalletsRepository
     {

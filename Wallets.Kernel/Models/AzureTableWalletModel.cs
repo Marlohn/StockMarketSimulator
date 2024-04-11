@@ -1,6 +1,6 @@
 ﻿using AzureTables.Connector.Models;
 
-namespace StockMarketSimulator.Wallets.Kernel.Models
+namespace Wallets.Kernel.Models
 {
     public class AzureTableWalletModel : BaseAzureTableModel
     {

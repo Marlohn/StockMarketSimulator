@@ -1,11 +1,11 @@
-﻿using StockMarketSimulator.StockPairs.Kernel.Models;
-using StockMarketSimulator.StockPairs.Kernel.Services;
-using StockMarketSimulator.Stocks.Kernel.Models;
-using StockMarketSimulator.Stocks.Kernel.Services;
-using StockMarketSimulator.Wallets.Kernel.Infrastructure.Repository;
-using StockMarketSimulator.Wallets.Kernel.Models;
+﻿using StockPairs.Kernel.Models;
+using StockPairs.Kernel.Services;
+using Stocks.Kernel.Models;
+using Stocks.Kernel.Services;
+using Wallets.Kernel.Infrastructure.Repository;
+using Wallets.Kernel.Models;
 
-namespace StockMarketSimulator.Wallets.Kernel.Services
+namespace Wallets.Kernel.Services
 {
     public class WalletsService : IWalletsService
     {
@@ -55,7 +55,7 @@ namespace StockMarketSimulator.Wallets.Kernel.Services
                 RowKey = stockSymbol,
                 WalletId = walletId.ToString(),
                 StockSymbol = stockSymbol,
-                Balance = azureTableUserModel is null ? quantity : (azureTableUserModel.Balance + quantity)
+                Balance = azureTableUserModel is null ? quantity : azureTableUserModel.Balance + quantity
             };
 
             await _walletsRepository.Upsert(azureTableWalletModel);
@@ -73,7 +73,7 @@ namespace StockMarketSimulator.Wallets.Kernel.Services
                 {
                     PartitionKey = walletId.ToString(),
                     RowKey = stockSymbol,
-                    Balance = azureTableUserModel is null ? quantity : (azureTableUserModel.Balance - quantity)
+                    Balance = azureTableUserModel is null ? quantity : azureTableUserModel.Balance - quantity
                 };
 
                 //Todo: validate enough balance

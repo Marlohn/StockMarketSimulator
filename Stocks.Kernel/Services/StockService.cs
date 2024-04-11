@@ -1,7 +1,7 @@
-﻿using StockMarketSimulator.Stocks.Kernel.Infrastructure.Repository;
-using StockMarketSimulator.Stocks.Kernel.Models;
+﻿using Stocks.Kernel.Infrastructure.Repository;
+using Stocks.Kernel.Models;
 
-namespace StockMarketSimulator.Stocks.Kernel.Services
+namespace Stocks.Kernel.Services
 {
     public class StockService : IStockService
     {

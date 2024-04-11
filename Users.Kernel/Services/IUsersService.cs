@@ -1,6 +1,6 @@
-﻿using StockMarketSimulator.Users.Kernel.Models;
+﻿using Users.Kernel.Models;
 
-namespace StockMarketSimulator.Users.Kernel.Services
+namespace Users.Kernel.Services
 {
     public interface IUsersService
     {

@@ -1,9 +1,9 @@
 using Microsoft.Azure.Functions.Worker;
 using Microsoft.Extensions.Logging;
-using StockMarketSimulator.StockPairs.Kernel.Models;
-using StockMarketSimulator.StockPairs.Kernel.Services;
+using StockPairs.Kernel.Models;
+using StockPairs.Kernel.Services;
 
-namespace StockMarketSimulator.Sinks.Functions
+namespace Sinks.Functions.Functions
 {
     public class ProcessStockPairs
     {

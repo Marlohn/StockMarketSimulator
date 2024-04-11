@@ -1,7 +1,7 @@
 ﻿using AzureQueues.Connector;
-using StockMarketSimulator.StockPairs.Kernel.Models;
+using StockPairs.Kernel.Models;
 
-namespace StockMarketSimulator.StockPairs.Kernel.Services
+namespace StockPairs.Kernel.Services
 {
     public class QueueProcessStockPairsService : AzureQueueRepositoryBase<StockPairDTO>, IQueueProcessStockPairsService
     {

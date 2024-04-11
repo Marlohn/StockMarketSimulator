@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using StockMarketSimulator.Users.Kernel.Models;
-using StockMarketSimulator.Users.Kernel.Services;
+using Users.Kernel.Models;
+using Users.Kernel.Services;
 
-namespace StockMarketSimulator.API.Controllers
+namespace Users.API.Controllers
 {
     [ApiController]
     [Route("[controller]")]

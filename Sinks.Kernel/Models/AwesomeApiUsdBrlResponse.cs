@@ -1,9 +1,9 @@
 ﻿using Ardalis.GuardClauses;
 using UtilityExtensions;
-using StockMarketSimulator.Sinks.Kernel.Models.Interfaces;
 using System.Text.Json.Serialization;
+using Sinks.Kernel.Models.Interfaces;
 
-namespace StockMarketSimulator.Sinks.Kernel.Models
+namespace Sinks.Kernel.Models
 {
     public class AwesomeApiUsdBrlResponse : IStockDataExtractor
     {
