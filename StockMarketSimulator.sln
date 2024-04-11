@@ -23,7 +23,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wallets.Kernel", "Wallets.K
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StockPairs.Kernel", "StockMarketSimulator.StockPairs.Kernel\StockPairs.Kernel.csproj", "{E50428DA-4312-4D0F-80C7-BD7918D0A7C4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Stocks.Kernel", "StockMarketSimulator.Stocks.Kernel\Stocks.Kernel.csproj", "{C42EABCD-D176-4E78-AD7B-D1B54D6C53EE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Stocks.Kernel", "Stocks.Kernel\Stocks.Kernel.csproj", "{C42EABCD-D176-4E78-AD7B-D1B54D6C53EE}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzureQueues.Connector", "AzureQueues.Connector\AzureQueues.Connector.csproj", "{AB888645-D426-4E5B-9D19-D0238A503168}"
 EndProject

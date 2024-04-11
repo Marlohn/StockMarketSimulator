@@ -5,7 +5,7 @@ VisualStudioVersion = 17.9.34622.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{8E598043-BF03-4E19-AD55-767C771E1AEA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Users.API", "StockMarketSimulator.API\Users.API.csproj", "{A1BFE6C8-0A42-45F6-8403-9988633A6C93}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Users.API", "Users.API\Users.API.csproj", "{A1BFE6C8-0A42-45F6-8403-9988633A6C93}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Connectors", "Connectors", "{0E6FCA52-1420-484D-B267-C70C8BBE7EE3}"
 EndProject
