@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Ardalis.GuardClauses" Version="4.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Infrastructure\Repository\Queues\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Common\Connectors\AzureQueues.Connector\AzureQueues.Connector.csproj" />
+    <ProjectReference Include="..\..\..\Common\Connectors\AzureTables.Connector\AzureTables.Connector.csproj" />
+    <ProjectReference Include="..\..\..\Common\Connectors\HTTP.Connector\HTTP.Connector.csproj" />
+    <ProjectReference Include="..\..\..\Common\UtilityExtensions\UtilityExtensions.csproj" />
+    <ProjectReference Include="..\..\StockPairs\StockPairs.Kernel\StockPairs.Kernel.csproj" />
+    <ProjectReference Include="..\..\Stocks\Stocks.Kernel\Stocks.Kernel.csproj" />
+  </ItemGroup>
+
+</Project>

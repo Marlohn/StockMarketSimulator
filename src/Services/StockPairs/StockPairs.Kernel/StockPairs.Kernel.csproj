@@ -11,10 +11,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\AzureQueues.Connector\AzureQueues.Connector.csproj" />
-    <ProjectReference Include="..\AzureTables.Connector\AzureTables.Connector.csproj" />
-    <ProjectReference Include="..\StockPairs.Kernel\StockPairs.Kernel.csproj" />
-    <ProjectReference Include="..\Stocks.Kernel\Stocks.Kernel.csproj" />
+    <ProjectReference Include="..\..\..\Common\Connectors\AzureQueues.Connector\AzureQueues.Connector.csproj" />
+    <ProjectReference Include="..\..\..\Common\Connectors\AzureTables.Connector\AzureTables.Connector.csproj" />
   </ItemGroup>
 
 </Project>

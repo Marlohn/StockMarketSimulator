@@ -11,8 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\AzureTables.Connector\AzureTables.Connector.csproj" />
-    <ProjectReference Include="..\UtilityExtensions\UtilityExtensions.csproj" />
+    <ProjectReference Include="..\..\..\Common\Connectors\AzureTables.Connector\AzureTables.Connector.csproj" />
   </ItemGroup>
 
 </Project>
