@@ -7,11 +7,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Infrastructure\Repository\Queues\**" />
+    <EmbeddedResource Remove="Infrastructure\Repository\Queues\**" />
+    <None Remove="Infrastructure\Repository\Queues\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Ardalis.GuardClauses" Version="4.5.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Infrastructure\Repository\Queues\" />
+    <Folder Include="Application\Dtos\" />
   </ItemGroup>
 
   <ItemGroup>

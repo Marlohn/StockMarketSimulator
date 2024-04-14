@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Users.Kernel.Models;
-using Users.Kernel.Services;
+using Users.Kernel.Application.Dtos;
+using Users.Kernel.Domain.Services;
 
 namespace Users.API.Controllers
 {

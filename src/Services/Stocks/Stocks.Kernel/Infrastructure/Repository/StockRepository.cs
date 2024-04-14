@@ -1,7 +1,8 @@
 ﻿using Azure.Data.Tables;
 using AzureTables.Connector;
 using AzureTables.Connector.Enums;
-using Stocks.Kernel.Models;
+using Stocks.Kernel.Application.Models;
+using Stocks.Kernel.Domain.Repository;
 
 namespace Stocks.Kernel.Infrastructure.Repository
 {

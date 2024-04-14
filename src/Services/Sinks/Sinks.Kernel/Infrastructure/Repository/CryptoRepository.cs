@@ -1,7 +1,8 @@
 ﻿using HTTP.Connector;
 using HTTP.Connector.Models;
 using RestSharp;
-using Sinks.Kernel.Models;
+using Sinks.Kernel.Application.Models.Responses;
+using Sinks.Kernel.Domain.Repository;
 
 namespace Sinks.Kernel.Infrastructure.Repository
 {

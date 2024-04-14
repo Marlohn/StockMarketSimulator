@@ -1,7 +1,8 @@
 ﻿using AzureTables.Connector.IoC;
 using Microsoft.Extensions.DependencyInjection;
+using Stocks.Kernel.Domain.Repository;
+using Stocks.Kernel.Domain.Services;
 using Stocks.Kernel.Infrastructure.Repository;
-using Stocks.Kernel.Services;
 
 namespace Stocks.Kernel.Infrastructure.IoC
 {

@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Wallets.Kernel.Services;
+using Wallets.Kernel.Domain.Services;
 
 namespace Wallets.API.Controllers
 {

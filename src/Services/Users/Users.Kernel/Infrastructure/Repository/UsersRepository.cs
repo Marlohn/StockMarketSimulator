@@ -1,7 +1,8 @@
 ﻿using Azure.Data.Tables;
 using AzureTables.Connector;
 using AzureTables.Connector.Enums;
-using Users.Kernel.Models;
+using Users.Kernel.Application.Models;
+using Users.Kernel.Domain.Repository;
 
 namespace Users.Kernel.Infrastructure.Repository
 {

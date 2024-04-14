@@ -1,7 +1,8 @@
 ﻿using Azure.Data.Tables;
 using AzureTables.Connector;
 using AzureTables.Connector.Enums;
-using Wallets.Kernel.Models;
+using Wallets.Kernel.Application.Models;
+using Wallets.Kernel.Domain.Repositories;
 
 namespace Wallets.Kernel.Infrastructure.Repository
 {

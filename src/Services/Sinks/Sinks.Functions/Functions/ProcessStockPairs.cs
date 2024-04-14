@@ -1,7 +1,7 @@
 using Microsoft.Azure.Functions.Worker;
 using Microsoft.Extensions.Logging;
-using StockPairs.Kernel.Models;
-using StockPairs.Kernel.Services;
+using StockPairs.Kernel.Application.Dtos;
+using StockPairs.Kernel.Domain.Services;
 
 namespace Sinks.Functions.Functions
 {

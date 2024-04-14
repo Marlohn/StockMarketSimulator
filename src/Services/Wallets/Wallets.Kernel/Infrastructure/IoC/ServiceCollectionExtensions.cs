@@ -1,7 +1,8 @@
 ﻿using AzureTables.Connector.IoC;
 using Microsoft.Extensions.DependencyInjection;
+using Wallets.Kernel.Domain.Repositories;
+using Wallets.Kernel.Domain.Services;
 using Wallets.Kernel.Infrastructure.Repository;
-using Wallets.Kernel.Services;
 
 namespace Wallets.Kernel.Infrastructure.IoC
 {
